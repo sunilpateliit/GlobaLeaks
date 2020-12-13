@@ -16,15 +16,12 @@ env:
 matrix:
   fast_finish: true
   include:
-  - env: GLTEST='end2end-0' BROWSER='android 5.1'
-  - env: GLTEST='end2end-1' BROWSER='safari 13'
-  - env: GLTEST='end2end-2' BROWSER='safari 12'
-  - env: GLTEST='end2end-3' BROWSER='safari 11'
-  allow_failures:
-  - env: GLTEST='end2end-0' BROWSER='android 5.1'
-  - env: GLTEST='end2end-1' BROWSER='safari 13'
-  - env: GLTEST='end2end-2' BROWSER='safari 12'
-  - env: GLTEST='end2end-3' BROWSER='safari 11'
+  - env: GLTEST='end2end-0'
+  - env: GLTEST='end2end-1'
+  - env: GLTEST='end2end-2'
+  - env: GLTEST='end2end-3'
+  - env: GLTEST='end2end-4'
+  - env: GLTEST='end2end-5'
 before_install:
 - nvm install stable
 - nvm use stable
