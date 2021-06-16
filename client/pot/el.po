@@ -17,8 +17,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: Adrian Pappas\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Greek (http://www.transifex.com/otf/globaleaks/language/el/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -262,12 +262,6 @@ msgstr "Θεματοφύλακας των ταυτοτήτων"
 msgid "Identity"
 msgstr "Ταυτότητα"
 
-msgid "Available"
-msgstr "Διαθέσιμος"
-
-msgid "Not available"
-msgstr "Μη διαθέσιμος"
-
 msgid "Access requested"
 msgstr "Η πρόσβαση αιτήθηκε"
 
@@ -358,9 +352,6 @@ msgstr "Ισχυρός"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Κείμενο που εμφανίζεται στην κορυφή της διεπαφής για την επιλογή θεματικών ενοτήτων"
-
-msgid "Type to search…"
-msgstr "Πληκτρολογήστε για αναζήτηση"
 
 msgid "Silence email notifications"
 msgstr "Σίγαση ειδοποιήσεων μέσω email"
@@ -532,7 +523,7 @@ msgid "Tax code"
 msgstr "ΑΦΜ"
 
 msgid "File a report"
-msgstr ""
+msgstr "Καταχωρήστε μια αναφορά"
 
 msgid "Before proceeding, please set a new password."
 msgstr "Πριν συνεχίσετε, παρακαλώ ορίστε έναν νέο κωδικό πρόσβασης."
@@ -692,10 +683,10 @@ msgid "Type"
 msgstr "Τυπος"
 
 msgid "Severity"
-msgstr ""
+msgstr "Σοβαρότητα"
 
 msgid "Object"
-msgstr ""
+msgstr "Αντικείμενο"
 
 msgid "ID"
 msgstr "Ταυτότητα"
@@ -747,6 +738,9 @@ msgstr "Λογότυπο"
 
 msgid "Project name"
 msgstr "Όνομα πρωτοβουλίας"
+
+msgid "Description"
+msgstr "Περιγραφή"
 
 msgid "Homepage title"
 msgstr "Τίτλος αρχικής σελίδας "
@@ -807,9 +801,6 @@ msgstr "Απενεργοποιημένο"
 
 msgid "Enabled"
 msgstr "Ενεργοποιημένο"
-
-msgid "Description"
-msgstr "Περιγραφή"
 
 msgid "Questionnaire"
 msgstr "Ερωτηματολόγιο"
@@ -906,15 +897,6 @@ msgstr "Μη έγκυρη μορφή δεδομένων εισόδου."
 
 msgid "Input should be similar to:"
 msgstr "Τα δεδομένα εισόδου θα πρέπει να έχουν την μορφή:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Η χρήση του Let's Encrypt απαιτεί συμφωνία με τους Όρους Παροχής Υπηρεσιών."
-
-msgid "Read the Terms of Service"
-msgstr "Διαβάστε τους Όρους Χρήσης"
-
-msgid "I agree to the Terms of Service."
-msgstr "Συμφωνώ με τους όρους χρήσης."
 
 msgid "Country code"
 msgstr "Κωδικός χώρας"
@@ -1062,9 +1044,6 @@ msgstr "Όροι χρήσης"
 msgid "Date range"
 msgstr "Εύρος ημερομηνίας"
 
-msgid "Map"
-msgstr "Χάρτης"
-
 msgid "Group of questions"
 msgstr "Ομάδα των ερωτήσεων"
 
@@ -1172,12 +1151,6 @@ msgstr "Ιστοσελίδες"
 
 msgid "Mode:"
 msgstr "Κατάσταση:"
-
-msgid "Active"
-msgstr "Ενεργό"
-
-msgid "Inactive"
-msgstr "Μη ενεργό"
 
 msgid "Configure"
 msgstr "Διαμόρφωση "
@@ -1528,9 +1501,6 @@ msgstr "Μέγεθος αρχείου"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Αφήστε το πληροφοριοδότη για να προσθέσετε συνημμένα σε υποβολή"
 
-msgid "Never"
-msgstr "Ποτέ"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Να επιτρέπεται στο πρόσωπο που υποβάλλει την αναφορά να στέλνει μηνύματα"
 
@@ -1632,9 +1602,6 @@ msgstr "Η πρόσβαση στην ταυτότητα του προσώπου 
 
 msgid "Date of the request"
 msgstr "Ημερομηνία υποβολής της αίτησης"
-
-msgid "Undeclared"
-msgstr "Αδήλωτη"
 
 msgid "Congratulations!"
 msgstr "Συγχαρητήρια!"

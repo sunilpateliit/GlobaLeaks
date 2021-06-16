@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: Suzanne Ferguson\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Swahili (http://www.transifex.com/otf/globaleaks/language/sw/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -250,12 +250,6 @@ msgstr "Mwangalizi wa vitambulisho"
 msgid "Identity"
 msgstr "Kitambulisho"
 
-msgid "Available"
-msgstr "Kinapatikana"
-
-msgid "Not available"
-msgstr "Hakipatikani"
-
 msgid "Access requested"
 msgstr "Ufikiaji umeombwa"
 
@@ -346,9 +340,6 @@ msgstr "Imara"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Maandishi yameonyeshwa juu ya kiolesura cha kuchagua muktadha"
-
-msgid "Type to search…"
-msgstr "Andika ili utafute…"
 
 msgid "Silence email notifications"
 msgstr "Nyamazisha taarifa za barua pepe"
@@ -736,6 +727,9 @@ msgstr "Logo"
 msgid "Project name"
 msgstr "Jina la Mradi"
 
+msgid "Description"
+msgstr ""
+
 msgid "Homepage title"
 msgstr "Kichwa cha habari cha ukurasa wa kwanza"
 
@@ -795,9 +789,6 @@ msgstr "Haijawezeshwa"
 
 msgid "Enabled"
 msgstr "Imewezeshwa"
-
-msgid "Description"
-msgstr ""
 
 msgid "Questionnaire"
 msgstr "Dodoso"
@@ -894,15 +885,6 @@ msgstr "Muundo wa uingizaji ni batili."
 
 msgid "Input should be similar to:"
 msgstr "Ingizo zinapaswa kuwa sawa na:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Kutumia Usimbaji fiche inahitaji makubaliano na Sheria na Masharti yao."
-
-msgid "Read the Terms of Service"
-msgstr "Soma Masharti ya Huduma"
-
-msgid "I agree to the Terms of Service."
-msgstr "Nakubaliana na Masharti ya Huduma"
 
 msgid "Country code"
 msgstr "Nambari ya nchi"
@@ -1050,9 +1032,6 @@ msgstr "Masharti ya huduma"
 msgid "Date range"
 msgstr "Masafa ya Tarehe"
 
-msgid "Map"
-msgstr "Ramani"
-
 msgid "Group of questions"
 msgstr "Kundi la maswali"
 
@@ -1160,12 +1139,6 @@ msgstr "Tovuti"
 
 msgid "Mode:"
 msgstr ""
-
-msgid "Active"
-msgstr "Hai"
-
-msgid "Inactive"
-msgstr "Sio hai"
 
 msgid "Configure"
 msgstr "Sanidi"
@@ -1516,9 +1489,6 @@ msgstr "Ukubwa wa faili"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Ruhusu mtoa taarifa ya siri kuongeza viambatanisho kwenye ripoti"
 
-msgid "Never"
-msgstr "Kamwe"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Ruhusu mtoa taarifa ya siri kutuma ujumbe"
 
@@ -1620,9 +1590,6 @@ msgstr "Ufikiaji wa kitambulisho cha mtoa taarifa za siri umeombwa kwa mwangalzi
 
 msgid "Date of the request"
 msgstr "Tarehe ya kuomba"
-
-msgid "Undeclared"
-msgstr "Haikutangazwa"
 
 msgid "Congratulations!"
 msgstr "Hongera!"

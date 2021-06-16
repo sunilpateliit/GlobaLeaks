@@ -1,6 +1,7 @@
 # 
 # Translators:
-# bact' <arthit@gmail.com>, 2020
+# Arthit Suriyawongkul, 2021
+# Arthit Suriyawongkul, 2020-2021
 # Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2014-2015,2017-2018,2020
 # b33a4006134bb6ee62b30fc0fac5cec6, 2016
 # b33a4006134bb6ee62b30fc0fac5cec6, 2016
@@ -11,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
+"PO-Revision-Date: 2021-05-21 03:32+0000\n"
+"Last-Translator: Arthit Suriyawongkul\n"
 "Language-Team: Thai (http://www.transifex.com/otf/globaleaks/language/th/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -256,12 +257,6 @@ msgstr "ผู้พิทักษ์ของตัวตน"
 msgid "Identity"
 msgstr "อัตลักษณ์"
 
-msgid "Available"
-msgstr "สามารถใช้ได้"
-
-msgid "Not available"
-msgstr "ไม่สามารถใช้ได้"
-
 msgid "Access requested"
 msgstr "การเข้าถึงที่ถูกร้องขอ"
 
@@ -352,9 +347,6 @@ msgstr "แข็งแรง"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "ข้อความแสดงที่ด้านบนของหน้าจอสำหรับเลือกบริบท"
-
-msgid "Type to search…"
-msgstr "พิมพ์เพื่อค้นหา..."
 
 msgid "Silence email notifications"
 msgstr "ปิดการแจ้งเตือนทางอีเมล"
@@ -526,7 +518,7 @@ msgid "Tax code"
 msgstr "เลขประจำตัวผู้เสียภาษี"
 
 msgid "File a report"
-msgstr ""
+msgstr "ยื่นรายงาน"
 
 msgid "Before proceeding, please set a new password."
 msgstr "ก่อนจะไปต่อ กรุณาตั้งรหัสผ่านใหม่"
@@ -568,7 +560,7 @@ msgid "Enable administrators to change user passwords"
 msgstr "เปิดให้ผู้ดูแลระบบเปลี่ยนรหัสผ่านของผู้ใช้ได้"
 
 msgid "Administrators authorized to change user passwords:"
-msgstr ""
+msgstr "ผู้ดูแลที่ได้รับสิทธิ์ในการเปลี่ยนรหัสผ่านของผู้ใช้:"
 
 msgid "Enable multisite feature"
 msgstr "เปิดใช้งานการรองรับหลายเว็บไซต์"
@@ -633,7 +625,7 @@ msgid "Set the value to 0 to disable this feature."
 msgstr "ตั้งค่าเป็น 0 เพื่อปิดการทำงานนี้"
 
 msgid "Number of days till notifying unread reports to users"
-msgstr ""
+msgstr "จำนวนวันจนกว่าจะแจ้งผู้ใช้ถึงรายงานที่ยังไม่ได้อ่าน"
 
 msgid "Enable custodian user role"
 msgstr "เปิดใช้บทบาทผู้พิทักษ์"
@@ -642,7 +634,7 @@ msgid "Enable scoring system"
 msgstr "เปิดใช้งานระบบให้คะแนน"
 
 msgid "Enable private annotations"
-msgstr ""
+msgstr "เปิดใช้การเติมคำอธิบายส่วนตัว"
 
 msgid "Allow the following websites to embed the platform inside iframes"
 msgstr "อนุญาตให้เว็บไซต์ดังต่อไปนี้ฝังแพลตฟอร์มเข้าไปใน iframe ได้"
@@ -686,10 +678,10 @@ msgid "Type"
 msgstr "ชนิด"
 
 msgid "Severity"
-msgstr ""
+msgstr "ความรุนแรง"
 
 msgid "Object"
-msgstr ""
+msgstr "วัตถุ"
 
 msgid "ID"
 msgstr "รหัสประจำ"
@@ -741,6 +733,9 @@ msgstr "โลโก้"
 
 msgid "Project name"
 msgstr "ชื่อโครงการ"
+
+msgid "Description"
+msgstr "คำอธิบาย"
 
 msgid "Homepage title"
 msgstr "ชื่อหน้าหลัก"
@@ -801,9 +796,6 @@ msgstr "ถูกปิดใช้งาน"
 
 msgid "Enabled"
 msgstr "เปิดใช้งาน"
-
-msgid "Description"
-msgstr "คำอธิบาย"
 
 msgid "Questionnaire"
 msgstr "แบบสอบถาม"
@@ -878,7 +870,7 @@ msgid "Restrict access to specific IP addresses"
 msgstr "อนุญาตให้เข้าถึงได้เฉพาะจากที่อยู่ไอพีที่เจาะจง"
 
 msgid "Allowed IP addresses"
-msgstr ""
+msgstr "อนุญาตที่อยู่ไอพี"
 
 msgid "Admin"
 msgstr "ผู้ดูแลระบบ"
@@ -900,15 +892,6 @@ msgstr "รูปแบบข้อมูลไม่ถูกต้อง"
 
 msgid "Input should be similar to:"
 msgstr "ข้อมูลควรมีลักษณะแบบเดียวกับ:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "การใช้ Let's Encrypt นั้นจำเป็นต้องตกลงยอมรับเงื่อนไขการให้บริการของพวกเขา"
-
-msgid "Read the Terms of Service"
-msgstr "อ่านข้อตกลงการให้บริการ"
-
-msgid "I agree to the Terms of Service."
-msgstr "ฉันยอมรับข้อตกลงในการให้บริการ"
 
 msgid "Country code"
 msgstr "รหัสประเทศ"
@@ -1056,9 +1039,6 @@ msgstr "เงื่อนไขการให้บริการ"
 msgid "Date range"
 msgstr "ช่วงวัน"
 
-msgid "Map"
-msgstr "แผนที่"
-
 msgid "Group of questions"
 msgstr "กลุ่มคำถาม"
 
@@ -1167,12 +1147,6 @@ msgstr "ไซต์"
 msgid "Mode:"
 msgstr "โหมด:"
 
-msgid "Active"
-msgstr "ทำงานอยู่"
-
-msgid "Inactive"
-msgstr "ไม่ทำงาน"
-
 msgid "Configure"
 msgstr "ปรับแต่งค่า"
 
@@ -1246,7 +1220,7 @@ msgid "Allow the recipient to delete reports"
 msgstr "อนุญาตให้ผู้รับลบรายงานได้"
 
 msgid "Give the user administrative access to the following features:"
-msgstr ""
+msgstr "ให้ผู้ใช้มีสิทธิ์ผู้ดูแลในการเข้าถึงความสามารถเหล่านี้:"
 
 msgid "Request date"
 msgstr "วันที่ร้องขอ"
@@ -1258,7 +1232,7 @@ msgid "Authorization"
 msgstr "การมอบอำนาจ"
 
 msgid "Requests"
-msgstr ""
+msgstr "คำขอ"
 
 msgid "The validation link is either incorrect or has expired."
 msgstr "ลิงก์ตรวจความถูกต้องไม่ถูกต้องหรือหมดอายุแล้ว"
@@ -1408,7 +1382,7 @@ msgstr "ดูเหมือนว่าคุณกำลังเรียก
 msgid ""
 "You are strongly advised to visit this site using the app called Tor "
 "Browser, that protects your identity."
-msgstr ""
+msgstr "เราแนะนำเป็นอย่างยิ่ง ให้คุณเข้าถึงเว็บไซต์นี้ด้วยแอปที่ชื่อ Tor Browser มันจะปกป้องตัวตนของคุณ"
 
 msgid "Download the Tor Browser"
 msgstr "ดาวน์โหลด Tor Browser"
@@ -1522,9 +1496,6 @@ msgstr "ขนาดแฟ้ม"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "อนุญาตให้ผู้แจ้งเบาะแสแนบแฟ้มในรายงาน"
 
-msgid "Never"
-msgstr "ไม่เคยเลย"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "อนุญาตให้ผู้แจ้งเบาะแสส่งข้อความ"
 
@@ -1591,7 +1562,7 @@ msgid ""
 "your “Account Recovery Key” and store it safely. This key will be necessary "
 "to recover your access to the platform and to your data in case you forget "
 "your password."
-msgstr ""
+msgstr "เราแนะนำให้คุณไปที่ส่วน \"การปรับแต่ง\" เพื่อดึง \"กุญแจกู้คืนบัญชี\" ของคุณ และเก็บมันไว้ในที่ปลอดภัย กุญแจนี้จำเป็นสำหรับการกู้คืนสิทธิ์เข้าถึงแพลตฟอร์มของคุณและสำหรับการกู้คืนข้อมูล ในกรณีที่คุณลืมรหัสผ่าน"
 
 msgid "The provided recovery key is invalid."
 msgstr "กุญแจกู้คืนที่ให้มานั้นไม่ถูกต้อง"
@@ -1626,9 +1597,6 @@ msgstr "คำร้องขอเพื่อเข้าถึงตัวต
 
 msgid "Date of the request"
 msgstr "วันที่ร้องขอ"
-
-msgid "Undeclared"
-msgstr "ไม่ได้แจ้งไว้"
 
 msgid "Congratulations!"
 msgstr "ยินดีด้วย!"
@@ -1674,19 +1642,19 @@ msgid "Select the context of your report:"
 msgstr "เลือกบริบทของรายงานของคุณ:"
 
 msgid "The answer is too short"
-msgstr ""
+msgstr "คำตอบสั้นเกินไป"
 
 msgid "The specified input is not valid."
 msgstr "ข้อมูลเข้าที่ระบุไม่ตรงกับรูปแบบที่ถูกต้อง"
 
 msgid "The specified input is not valid:"
-msgstr ""
+msgstr "ค่าที่ใส่มาเหล่านี้มีรูปแบบไม่ถูกต้อง:"
 
 msgid "please enter a valid email address."
-msgstr ""
+msgstr "กรุณาใส่ที่อยู่อีเมลที่ถูกรูปแบบ"
 
 msgid "please enter numbers only."
-msgstr ""
+msgstr "กรุณาใส่ตัวเลขเท่านั้น"
 
 msgid "Submissions disabled"
 msgstr "การส่งถูกปิดใช้งาน"
@@ -1720,7 +1688,7 @@ msgid "Recipient selection"
 msgstr "การเลือกผู้รับ"
 
 msgid "Select the recipients of your report:"
-msgstr ""
+msgstr "เลือกผู้รับรายงานของคุณ:"
 
 msgid "Recipients selected:"
 msgstr "ผู้รับที่ถูกเลือก:"
@@ -1731,7 +1699,7 @@ msgstr "คุณเลือกผู้รับจนเต็มจำนว
 msgid ""
 "The following recipients will receive your report and could not be "
 "deselected:"
-msgstr ""
+msgstr "ผู้รับดังต่อไปนี้จะได้รับรายงานของคุณและจะไม่สามารถเลิกเลือกได้:"
 
 msgid ""
 "In this step the answers to the following questions are either missing or "
@@ -1756,20 +1724,20 @@ msgid "Please choose a configuration profile:"
 msgstr "กรุณาเลือกโปรไฟล์การปรับแต่ง:"
 
 msgid "Make it possible for this admin to reset user passwords."
-msgstr ""
+msgstr "ให้ผู้ดูแลสามารถล้างรหัสผ่านผู้ใช้เพื่อตั้งใหม่ได้"
 
 msgid ""
 "We advise selecting this option if you would like to protect data from being"
 " lost in the situation where recipients lose their passwords. On the other "
 "hand, we would not advise using this feature if you want to setup a system "
 "where only recipients are able to access submissions."
-msgstr ""
+msgstr "เราแนะนำให้เลือกตัวเลือกนี้ ถ้าคุณต้องการปกป้องข้อมูลจากการสูญหาย ในสถานการณ์ที่ผู้รับลืมรหัสผ่านของพวกเขา ในอีกทางหนึ่ง เราไม่แนะนำให้คุณใช้ความสามารถนี้ ถ้าคุณต้องการติดตั้งระบบที่มีเฉพาะผู้รับเท่านั้นที่จะเข้าถึงสิ่งที่ถูกส่งได้"
 
 msgid "Please choose a different username."
 msgstr "กรุณาเลือกชื่อผู้ใช้อื่น:"
 
 msgid "I have read and agree to the terms of the license."
-msgstr ""
+msgstr "ฉันได้อ่านและยอมรับเงื่อนไขในสัญญาอนุญาต"
 
 msgid "You have completed the platform wizard."
 msgstr "คุณได้ทำตามคำแนะนำการติดตั้งแพลตฟอร์มทั้งหมดแล้ว"
@@ -2135,16 +2103,16 @@ msgid "New report"
 msgstr "รายงานใหม่"
 
 msgid "This is an email to notify that an existing report has been updated."
-msgstr ""
+msgstr "นี่เป็นอีเมลเพื่อแจ้งว่ารายงานที่มีอยู่แล้วฉบับหนึ่งถูกปรับปรุง"
 
 msgid "Report updated"
-msgstr ""
+msgstr "รายงานถูกปรับปรุง"
 
 msgid "This email is to remind you the presence of unread or updated reports."
-msgstr ""
+msgstr "นี่เป็นอีเมลเพื่อเตือนความจำคุณว่ามีรายงานที่ยังไม่ได้อ่านหรือรายงานที่ถูกปรับปรุง"
 
 msgid "Reminder about unread or updated reports"
-msgstr ""
+msgstr "เตือนความจำถึงรายงานที่ยังไม่ได้อ่านหรือที่ถูกปรับปรุง"
 
 msgid "Role: {Role}"
 msgstr "บทบาท: {Role}"

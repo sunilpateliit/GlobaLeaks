@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 #
 # Handlers dealing with platform authentication
-import pyotp
 from datetime import timedelta
 from random import SystemRandom
 from twisted.internet.defer import inlineCallbacks, returnValue
+
 from globaleaks.handlers.base import connection_check, BaseHandler
 from globaleaks.models import InternalTip, User, WhistleblowerTip
 from globaleaks.orm import transact
@@ -12,7 +12,7 @@ from globaleaks.rest import errors, requests
 from globaleaks.sessions import Sessions
 from globaleaks.settings import Settings
 from globaleaks.state import State
-from globaleaks.utils.crypto import Base64Encoder, GCE
+from globaleaks.utils.crypto import totpVerify, Base64Encoder, GCE
 from globaleaks.utils.log import log
 from globaleaks.utils.utility import datetime_now, deferred_sleep
 
@@ -112,6 +112,7 @@ def login(session, tid, username, password, authcode, client_using_tor, client_i
     if not user or not GCE.check_password(user.hash_alg, password, user.salt, user.password):
         login_failure(tid, 0)
 
+
     connection_check(tid, client_ip, user.role, client_using_tor)
 
     crypto_prv_key = ''
@@ -130,9 +131,10 @@ def login(session, tid, username, password, authcode, client_using_tor, client_i
     if user.two_factor_enable:
         if authcode != '':
             # RFC 6238: step size 30 sec; valid_window = 1; total size of the window: 1.30 sec
-            if not pyotp.TOTP(user.two_factor_secret).verify(authcode, valid_window=1):
+            try:
+                totpVerify(user.two_factor_secret, authcode)
+            except:
                 raise errors.InvalidTwoFactorAuthCode
-
         else:
             raise errors.TwoFactorAuthCodeRequired
 
@@ -147,6 +149,7 @@ class AuthenticationHandler(BaseHandler):
     """
     check_roles = 'any'
     uniform_answer_time = True
+    require_token = [b'POST']
 
     @inlineCallbacks
     def post(self):
@@ -157,8 +160,6 @@ class AuthenticationHandler(BaseHandler):
             tid = self.request.tid
 
         yield login_delay(tid)
-
-        self.state.tokens.use(request['token'])
 
         session = yield login(tid,
                               request['username'],
@@ -183,14 +184,13 @@ class TokenAuthHandler(BaseHandler):
     """
     check_roles = 'any'
     uniform_answer_time = True
+    require_token = [b'POST']
 
     @inlineCallbacks
     def post(self):
         request = self.validate_message(self.request.content.read(), requests.TokenAuthDesc)
 
         yield login_delay(self.request.tid)
-
-        self.state.tokens.use(request['token'])
 
         session = Sessions.get(request['authtoken'])
         if session is None or session.tid != self.request.tid:
@@ -209,6 +209,7 @@ class ReceiptAuthHandler(BaseHandler):
     Receipt handler used by whistleblowers
     """
     check_roles = 'any'
+    require_token = [b'POST']
     uniform_answer_time = True
 
     @inlineCallbacks
@@ -216,8 +217,6 @@ class ReceiptAuthHandler(BaseHandler):
         request = self.validate_message(self.request.content.read(), requests.ReceiptAuthDesc)
 
         yield login_delay(self.request.tid)
-
-        self.state.tokens.use(request['token'])
 
         connection_check(self.request.tid, self.request.client_ip,
                          'whistleblower', self.request.client_using_tor)
@@ -239,18 +238,18 @@ class SessionHandler(BaseHandler):
         """
         Refresh and retrive session
         """
-        return self.current_user.serialize()
+        return self.session.serialize()
 
     def delete(self):
         """
         Logout
         """
-        if self.current_user.user_role == 'whistleblower':
-            State.log(tid=self.current_user.tid,  type='whistleblower_logout')
+        if self.session.user_role == 'whistleblower':
+            State.log(tid=self.session.tid,  type='whistleblower_logout')
         else:
-            State.log(tid=self.current_user.tid,  type='logout', user_id=self.current_user.user_id)
+            State.log(tid=self.session.tid,  type='logout', user_id=self.session.user_id)
 
-        del Sessions[self.current_user.id]
+        del Sessions[self.session.id]
 
 
 
@@ -266,13 +265,13 @@ class TenantAuthSwitchHandler(BaseHandler):
 
         tid = int(tid)
         session = Sessions.new(tid,
-                               self.current_user.user_id,
-                               self.current_user.user_tid,
-                               self.current_user.user_role,
+                               self.session.user_id,
+                               self.session.user_tid,
+                               self.session.user_role,
                                False,
                                True,
-                               self.current_user.cc,
-                               self.current_user.ek,
+                               self.session.cc,
+                               self.session.ek,
                                True)
 
         return {'redirect': '/t/%d/#/login?token=%s' % (tid, session.id)}

@@ -7,7 +7,7 @@
 # b33a4006134bb6ee62b30fc0fac5cec6, 2013
 # trendspotter, 2019
 # trendspotter, 2019
-# trendspotter, 2018-2019
+# trendspotter, 2018-2019,2021
 # Lenka Ježková <lenka.jezkova@oziveni.cz>, 2019-2020
 # Miroslav Kučera <mkucera66@seznam.cz>, 2013-2017
 # Mr Higgins, 2016-2018,2020
@@ -15,8 +15,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: Lenka Ježková <lenka.jezkova@oziveni.cz>\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Czech (http://www.transifex.com/otf/globaleaks/language/cs/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -260,12 +260,6 @@ msgstr "Správce identit"
 msgid "Identity"
 msgstr "Identita"
 
-msgid "Available"
-msgstr "Dostupný"
-
-msgid "Not available"
-msgstr "Nedostupný"
-
 msgid "Access requested"
 msgstr "Požádáno o přístup"
 
@@ -356,9 +350,6 @@ msgstr "Silný"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Text zobrazený na vrchu rozhraní pro výběr kontextů"
-
-msgid "Type to search…"
-msgstr "Pište pro vyhledávání..."
 
 msgid "Silence email notifications"
 msgstr "Tiché emailové notifikace"
@@ -530,7 +521,7 @@ msgid "Tax code"
 msgstr "DIČ"
 
 msgid "File a report"
-msgstr ""
+msgstr "Podat hlášení"
 
 msgid "Before proceeding, please set a new password."
 msgstr "Než budete pokračovat, nastavte prosím nové heslo."
@@ -690,10 +681,10 @@ msgid "Type"
 msgstr "Typ"
 
 msgid "Severity"
-msgstr ""
+msgstr "Závažnost"
 
 msgid "Object"
-msgstr ""
+msgstr "Objekt"
 
 msgid "ID"
 msgstr "ID"
@@ -745,6 +736,9 @@ msgstr "Logo"
 
 msgid "Project name"
 msgstr "Jméno iniciativy"
+
+msgid "Description"
+msgstr "Popis"
 
 msgid "Homepage title"
 msgstr "Název domovské stránky"
@@ -805,9 +799,6 @@ msgstr "Vypnuto"
 
 msgid "Enabled"
 msgstr "Zapnuto"
-
-msgid "Description"
-msgstr "Popis"
 
 msgid "Questionnaire"
 msgstr "Dotazník"
@@ -904,15 +895,6 @@ msgstr "Neplatný vstupní formát."
 
 msgid "Input should be similar to:"
 msgstr "Vstup by měl být podobný:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Použití Let's Encrypt vyžaduje odsouhlasení jejich podmínek užívání služby."
-
-msgid "Read the Terms of Service"
-msgstr "Přečíst podmínky využívání služby"
-
-msgid "I agree to the Terms of Service."
-msgstr "Souhlasím s Podmínkami využívání služby"
 
 msgid "Country code"
 msgstr "Kód země"
@@ -1060,9 +1042,6 @@ msgstr "Podmínky užívání služby"
 msgid "Date range"
 msgstr "Časové období"
 
-msgid "Map"
-msgstr "Mapa"
-
 msgid "Group of questions"
 msgstr "Skupina otázek"
 
@@ -1170,12 +1149,6 @@ msgstr "Stránky"
 
 msgid "Mode:"
 msgstr "Režim"
-
-msgid "Active"
-msgstr "Aktivní"
-
-msgid "Inactive"
-msgstr "Neaktivní"
 
 msgid "Configure"
 msgstr "Nastavení"
@@ -1526,9 +1499,6 @@ msgstr "Velikost souboru"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Povolit oznamovateli přidat přílohy k podáním"
 
-msgid "Never"
-msgstr "Nikdy"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Povolit oznamovateli posílat zprávy"
 
@@ -1630,9 +1600,6 @@ msgstr "Správce byl požádán o přístup k identitě oznamovatele"
 
 msgid "Date of the request"
 msgstr "Datum požadavku"
-
-msgid "Undeclared"
-msgstr "Neurčité"
 
 msgid "Congratulations!"
 msgstr "Gratulujeme!"

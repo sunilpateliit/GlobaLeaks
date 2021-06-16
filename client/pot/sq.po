@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Albanian (http://www.transifex.com/otf/globaleaks/language/sq/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -253,12 +253,6 @@ msgstr "Kujdestari i identiteteve"
 msgid "Identity"
 msgstr "Identitet"
 
-msgid "Available"
-msgstr "Në dispozicion"
-
-msgid "Not available"
-msgstr "I padisponueshem"
-
 msgid "Access requested"
 msgstr "Qasja e kërkuar"
 
@@ -349,9 +343,6 @@ msgstr "i fortë"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Tekst treguar në krye të ndërfaqes për zgjedhjen kontekstet"
-
-msgid "Type to search…"
-msgstr "Shkruani për kërkim"
 
 msgid "Silence email notifications"
 msgstr "Ndal njoftimet nga emaili"
@@ -739,6 +730,9 @@ msgstr "Kyçje"
 msgid "Project name"
 msgstr "Emri i projektit"
 
+msgid "Description"
+msgstr "Përshkrim"
+
 msgid "Homepage title"
 msgstr "Titulli i Kryefaqes "
 
@@ -798,9 +792,6 @@ msgstr "Paaftësuar"
 
 msgid "Enabled"
 msgstr "Mundësuar"
-
-msgid "Description"
-msgstr "Përshkrim"
 
 msgid "Questionnaire"
 msgstr "pyetësor"
@@ -897,15 +888,6 @@ msgstr "Hyrje jashtë formatit."
 
 msgid "Input should be similar to:"
 msgstr "Hyrja duhet të jetëe njëjtë me:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Përdorimi i enkriptimit kërkon marrëveshje me Kushtet e Shërbimit."
-
-msgid "Read the Terms of Service"
-msgstr "Lexoni Kushtet e Shërbimit"
-
-msgid "I agree to the Terms of Service."
-msgstr "Pajtohem me Kushtet e Shërbimit."
 
 msgid "Country code"
 msgstr "Kodi i shtetit"
@@ -1053,9 +1035,6 @@ msgstr "Kushtet e shërbimit"
 msgid "Date range"
 msgstr "Diapazoni i të dhënave"
 
-msgid "Map"
-msgstr "Hartë"
-
 msgid "Group of questions"
 msgstr "Grupi i pyetjeve"
 
@@ -1163,12 +1142,6 @@ msgstr "Faqet"
 
 msgid "Mode:"
 msgstr "Formë:"
-
-msgid "Active"
-msgstr "Aktive"
-
-msgid "Inactive"
-msgstr "Jo aktive"
 
 msgid "Configure"
 msgstr "Formësoni"
@@ -1519,9 +1492,6 @@ msgstr "Përmasat e Skedarit"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Lejo whistleblower për të shtuar të bashkëngjitni skedarë dorëzimit"
 
-msgid "Never"
-msgstr "Kurrë"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Lejo whistleblower për të dërguar mesazhe"
 
@@ -1623,9 +1593,6 @@ msgstr "Qasja në identitetin e Whistleblower i është kërkuar të kujdestarit
 
 msgid "Date of the request"
 msgstr "Data e kërkesës"
-
-msgid "Undeclared"
-msgstr ""
 
 msgid "Congratulations!"
 msgstr "Urime!"

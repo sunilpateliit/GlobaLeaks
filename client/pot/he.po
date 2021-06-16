@@ -19,7 +19,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Hebrew (http://www.transifex.com/otf/globaleaks/language/he/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -264,12 +264,6 @@ msgstr "אפוטרופוס של הזהויות"
 msgid "Identity"
 msgstr "זהות"
 
-msgid "Available"
-msgstr "זמין"
-
-msgid "Not available"
-msgstr "לא זמין"
-
 msgid "Access requested"
 msgstr "דרושה גישה"
 
@@ -360,9 +354,6 @@ msgstr "חזק"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr ""
-
-msgid "Type to search…"
-msgstr "הקלד כדי לחפש..."
 
 msgid "Silence email notifications"
 msgstr "השקט התראות דוא״ל"
@@ -750,6 +741,9 @@ msgstr "סמליל"
 msgid "Project name"
 msgstr "שם מיזם"
 
+msgid "Description"
+msgstr "תיאור"
+
 msgid "Homepage title"
 msgstr "כותרת עמוד הבית"
 
@@ -809,9 +803,6 @@ msgstr "מושבת"
 
 msgid "Enabled"
 msgstr "מאופשר"
-
-msgid "Description"
-msgstr "תיאור"
 
 msgid "Questionnaire"
 msgstr "שְׁאֵלוֹן"
@@ -908,15 +899,6 @@ msgstr ""
 
 msgid "Input should be similar to:"
 msgstr ""
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr ""
-
-msgid "Read the Terms of Service"
-msgstr "קרא את תנאיי השירות"
-
-msgid "I agree to the Terms of Service."
-msgstr "אני מסכים אל תנאיי השירות."
 
 msgid "Country code"
 msgstr "קוד מדינה"
@@ -1064,9 +1046,6 @@ msgstr "תנאי שירות"
 msgid "Date range"
 msgstr "טווח תאריכים"
 
-msgid "Map"
-msgstr "מפה"
-
 msgid "Group of questions"
 msgstr "קבוצת שאלות"
 
@@ -1174,12 +1153,6 @@ msgstr "אתרים"
 
 msgid "Mode:"
 msgstr "מצב:"
-
-msgid "Active"
-msgstr "פעיל"
-
-msgid "Inactive"
-msgstr "בלתי פעיל"
 
 msgid "Configure"
 msgstr "תצר"
@@ -1530,9 +1503,6 @@ msgstr "גודל קובץ"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr ""
 
-msgid "Never"
-msgstr "לעולם לא"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "התר לחושף השחיתות לשלוח הודעות"
 
@@ -1634,9 +1604,6 @@ msgstr "גישה אל הזהות של המתריע התבקש האפוטרופו
 
 msgid "Date of the request"
 msgstr "תאריך הבקשה"
-
-msgid "Undeclared"
-msgstr ""
 
 msgid "Congratulations!"
 msgstr "מזל טוב!"

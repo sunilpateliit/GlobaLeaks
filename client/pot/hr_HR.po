@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Croatian (Croatia) (http://www.transifex.com/otf/globaleaks/language/hr_HR/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -255,12 +255,6 @@ msgstr "Skrbnik identiteta"
 msgid "Identity"
 msgstr "Identitet"
 
-msgid "Available"
-msgstr "Dostupno"
-
-msgid "Not available"
-msgstr "Nije dostupno"
-
 msgid "Access requested"
 msgstr "Pristup zahtjevan"
 
@@ -351,9 +345,6 @@ msgstr "Snažna"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Tekst prikazan na vrhu sučelja za odabir konteksta"
-
-msgid "Type to search…"
-msgstr "Upišite za pretraživanje..."
 
 msgid "Silence email notifications"
 msgstr "Utišaj obavijesti emailom"
@@ -741,6 +732,9 @@ msgstr "Logo"
 msgid "Project name"
 msgstr "Naziv projekta"
 
+msgid "Description"
+msgstr "Opis"
+
 msgid "Homepage title"
 msgstr "Naslov naslovne stranice"
 
@@ -800,9 +794,6 @@ msgstr "Onemogućeno"
 
 msgid "Enabled"
 msgstr "Omogućeno"
-
-msgid "Description"
-msgstr "Opis"
 
 msgid "Questionnaire"
 msgstr "Upitnik"
@@ -899,15 +890,6 @@ msgstr "Pogrešan format unosa."
 
 msgid "Input should be similar to:"
 msgstr "Unos bi trebao biti sličan:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Korištenje Let's Encrypt-a zahtjeva pristanak na njihove Uvjete pružanja usluge."
-
-msgid "Read the Terms of Service"
-msgstr "Pročitaj Uvjete pružanja usluge."
-
-msgid "I agree to the Terms of Service."
-msgstr "Pristajem na Uvjete pružanja usluge."
 
 msgid "Country code"
 msgstr "Kod države"
@@ -1055,9 +1037,6 @@ msgstr "Uvjeti korištenja"
 msgid "Date range"
 msgstr "Raspon datuma"
 
-msgid "Map"
-msgstr "Karta"
-
 msgid "Group of questions"
 msgstr "Grupa pitanja"
 
@@ -1165,12 +1144,6 @@ msgstr "Stranice"
 
 msgid "Mode:"
 msgstr "Način rada:"
-
-msgid "Active"
-msgstr "Aktivno"
-
-msgid "Inactive"
-msgstr "Neaktivno"
 
 msgid "Configure"
 msgstr "Konfiguriraj"
@@ -1521,9 +1494,6 @@ msgstr "Veličina datoteke"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Dopusti zviždaču da doda privitke prijavi"
 
-msgid "Never"
-msgstr "Nikad"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Dopusti zviždaču da šalje poruke"
 
@@ -1625,9 +1595,6 @@ msgstr "Od skrbnika se zahtjevao pristup identitetu zviždača."
 
 msgid "Date of the request"
 msgstr "Datum zahtjeva"
-
-msgid "Undeclared"
-msgstr "Neprijavljeno"
 
 msgid "Congratulations!"
 msgstr "Čestitamo!"

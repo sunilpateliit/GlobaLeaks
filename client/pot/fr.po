@@ -20,11 +20,11 @@
 # Pierre <prjolivet@yahoo.fr>, 2015
 # Rima Sghaier, 2016
 # rike, 2014
-# rike, 2014
+# u <u@451f.org>, 2014
 # Towinet, 2013-2015
 # Trans-fr, 2015
 # AO <ao@localizationlab.org>, 2015-2016
-# rike, 2014
+# u <u@451f.org>, 2014
 # Yvette Agostini <mnemosyne@logioshermes.org>, 2015
 # Yvette Agostini <mnemosyne@logioshermes.org>, 2015
 # Xavier Lalu <xavier.lalu@carredinfo.fr>, 2013
@@ -39,8 +39,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-29 15:03+0000\n"
-"Last-Translator: AO <ao@localizationlab.org>\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: French (http://www.transifex.com/otf/globaleaks/language/fr/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -284,12 +284,6 @@ msgstr "Gardien des identités"
 msgid "Identity"
 msgstr "Identité"
 
-msgid "Available"
-msgstr "Disponible"
-
-msgid "Not available"
-msgstr "Non disponible"
-
 msgid "Access requested"
 msgstr "accès demandé"
 
@@ -380,9 +374,6 @@ msgstr "Robuste"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Texte de sélection des contextes, affiché en haut de l’interface"
-
-msgid "Type to search…"
-msgstr "Tapez pour chercher…"
 
 msgid "Silence email notifications"
 msgstr "Désactiver les courriel de notification"
@@ -770,6 +761,9 @@ msgstr "Logo"
 msgid "Project name"
 msgstr "Nom du projet"
 
+msgid "Description"
+msgstr "Description"
+
 msgid "Homepage title"
 msgstr "Titre de la page d’accueil"
 
@@ -829,9 +823,6 @@ msgstr "Désactivé"
 
 msgid "Enabled"
 msgstr "Activé"
-
-msgid "Description"
-msgstr "Description"
 
 msgid "Questionnaire"
 msgstr "Questionnaire"
@@ -928,15 +919,6 @@ msgstr "Le format de saisie est invalide."
 
 msgid "Input should be similar to:"
 msgstr "L’entrée devrait être similaire à :"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Vous devez accepter les conditions générales d’utilisation de « Let’s Encrypt » pour l’utiliser."
-
-msgid "Read the Terms of Service"
-msgstr "Lire les conditions générales d’utilisation"
-
-msgid "I agree to the Terms of Service."
-msgstr "J’accepte les conditions générales d’utilisation."
 
 msgid "Country code"
 msgstr "Indicatif de pays"
@@ -1084,9 +1066,6 @@ msgstr "Conditions générales d’utilisation "
 msgid "Date range"
 msgstr "Plage de dates"
 
-msgid "Map"
-msgstr "Carte"
-
 msgid "Group of questions"
 msgstr "Groupe de questions"
 
@@ -1194,12 +1173,6 @@ msgstr "Sites"
 
 msgid "Mode:"
 msgstr "Mode :"
-
-msgid "Active"
-msgstr "Actif"
-
-msgid "Inactive"
-msgstr "Inactif"
 
 msgid "Configure"
 msgstr "Configurer"
@@ -1550,9 +1523,6 @@ msgstr "Taille du fichier"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Permettre au lanceur d’alerte d’ajouter des fichiers joints au signalement"
 
-msgid "Never"
-msgstr "Jamais"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Permettre au lanceur d’alerte d’envoyer des messages"
 
@@ -1654,9 +1624,6 @@ msgstr "L’accès à l’identité du lanceur d’alerte a été demandé au ga
 
 msgid "Date of the request"
 msgstr "Date de la demande"
-
-msgid "Undeclared"
-msgstr "Non déclarée"
 
 msgid "Congratulations!"
 msgstr "Félicitations !"

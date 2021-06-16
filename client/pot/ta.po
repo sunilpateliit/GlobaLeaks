@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Tamil (http://www.transifex.com/otf/globaleaks/language/ta/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -252,12 +252,6 @@ msgstr "அடையாளங்களை பொறுப்பாளரா�
 msgid "Identity"
 msgstr "அடையாளம்"
 
-msgid "Available"
-msgstr "கிடைக்கும்"
-
-msgid "Not available"
-msgstr "கிடைக்கவில்லை"
-
 msgid "Access requested"
 msgstr "அணுகல் கோரப்பட்டது"
 
@@ -348,9 +342,6 @@ msgstr "வலுவான"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "உரை சூழல்களில் தேர்வு இடைமுகம் மேல் காட்டப்படும்"
-
-msgid "Type to search…"
-msgstr "தேடுவதற்குத் தட்டச்சு செய்க ..."
 
 msgid "Silence email notifications"
 msgstr "மின்னஞ்சல் அறிவிப்புகளை மௌனம்"
@@ -738,6 +729,9 @@ msgstr "சின்னம்"
 msgid "Project name"
 msgstr "திட்ட பெயர்"
 
+msgid "Description"
+msgstr "விபரம்"
+
 msgid "Homepage title"
 msgstr "முகப்பு தலைப்பு"
 
@@ -797,9 +791,6 @@ msgstr "முடக்கப்பட்டது"
 
 msgid "Enabled"
 msgstr "இயக்கப்பட்டது"
-
-msgid "Description"
-msgstr "விபரம்"
 
 msgid "Questionnaire"
 msgstr "கேள்வித்தாள்"
@@ -896,15 +887,6 @@ msgstr "தவறான உள்ளீட்டு வடிவமைப்ப�
 
 msgid "Input should be similar to:"
 msgstr "உள்ளீடு இதற்கு ஒத்திருக்க வேண்டும்:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "என்க்ரிப்ட் பயன்படுத்தி அவர்களின் சேவை விதிமுறைகளுக்கு உடன்பாடு தேவைப்படுகிறது."
-
-msgid "Read the Terms of Service"
-msgstr "சேவை விதிமுறைகளைப் படிக்கவும்"
-
-msgid "I agree to the Terms of Service."
-msgstr "நான் சேவை விதிமுறைகளை ஒப்புக்கொள்கிறீர்கள்."
 
 msgid "Country code"
 msgstr "நாட்டின் குறியீடு"
@@ -1052,9 +1034,6 @@ msgstr "சேவை விதிமுறைகளை"
 msgid "Date range"
 msgstr ""
 
-msgid "Map"
-msgstr "வரைபடம்"
-
 msgid "Group of questions"
 msgstr "கேள்விகள் குழு"
 
@@ -1162,12 +1141,6 @@ msgstr "தளங்கள்"
 
 msgid "Mode:"
 msgstr "முறை:"
-
-msgid "Active"
-msgstr "செயலில்"
-
-msgid "Inactive"
-msgstr "செயல்படா"
 
 msgid "Configure"
 msgstr "கட்டமைக்க"
@@ -1518,9 +1491,6 @@ msgstr "கோப்பின் அளவு"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "தகவல் தெரிவிப்பவர் சமர்ப்பிப்பு இணைப்புகளை சேர்க்க அனுமதி"
 
-msgid "Never"
-msgstr "ஒருபோதும்"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "தகவல் தெரிவிப்பவர் செய்திகளை அனுப்ப அனுமதிக்க"
 
@@ -1622,9 +1592,6 @@ msgstr "தகவல் தெரிவிப்பவர் அடையாள�
 
 msgid "Date of the request"
 msgstr "கோரிக்கையின் தேதி"
-
-msgid "Undeclared"
-msgstr "அறிவிக்கப்படாத"
 
 msgid "Congratulations!"
 msgstr "வாழ்த்துக்கள்!"

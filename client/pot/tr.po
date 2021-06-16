@@ -18,8 +18,8 @@
 # On the Line Turkiye <onthelineturkiye@gmail.com>, 2016
 # Ozgur Yasin <yasinaydin@korsanparti.org>, 2014
 # Sibel Taskin Simsek <sibelsimsek@sabanciuniv.edu>, 2015
-# T. E. Kalayci <tekrei@member.fsf.org>, 2020-2021
-# T. E. Kalayci <tekrei@member.fsf.org>, 2021
+# T. E. Kalayci <tekrei@tutanota.com>, 2020-2021
+# T. E. Kalayci <tekrei@tutanota.com>, 2021
 # Translinguini <translinguini@gmail.com>, 2013
 # Translinguini <translinguini@gmail.com>, 2013
 # Türker öz <man_lise@hotmail.com>, 2015
@@ -29,8 +29,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: T. E. Kalayci <tekrei@member.fsf.org>\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Turkish (http://www.transifex.com/otf/globaleaks/language/tr/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -274,12 +274,6 @@ msgstr "Kimliklerin koruyucusu"
 msgid "Identity"
 msgstr "Kimlik"
 
-msgid "Available"
-msgstr "Uygun"
-
-msgid "Not available"
-msgstr "Uygun değil"
-
 msgid "Access requested"
 msgstr "Erişim talep edildi"
 
@@ -370,9 +364,6 @@ msgstr "Güçlü"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Arayüz de en üstünde yer alan metin içerik seçmek için dir"
-
-msgid "Type to search…"
-msgstr "Aramak için yazın..."
 
 msgid "Silence email notifications"
 msgstr "E-posta bilgilendirmelerini sessize al"
@@ -760,6 +751,9 @@ msgstr "Logo"
 msgid "Project name"
 msgstr "Proje adı"
 
+msgid "Description"
+msgstr "Açıklama"
+
 msgid "Homepage title"
 msgstr "Anasayfa başlığı"
 
@@ -819,9 +813,6 @@ msgstr "Devre Dışı"
 
 msgid "Enabled"
 msgstr "Etkin"
-
-msgid "Description"
-msgstr "Açıklama"
 
 msgid "Questionnaire"
 msgstr "Anket"
@@ -918,15 +909,6 @@ msgstr "Geçersiz giriş biçimi."
 
 msgid "Input should be similar to:"
 msgstr "Giriş şuna benzemelidir:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Let's Encrypt kullanımı hizmet kullanım şartlarını kabul etmenizi gerektiriyor."
-
-msgid "Read the Terms of Service"
-msgstr "Hizmet kullanım şartlarını okuyun"
-
-msgid "I agree to the Terms of Service."
-msgstr "Hizmet kullanım şartlarını kabul ediyorum"
 
 msgid "Country code"
 msgstr "Ülke kodu"
@@ -1074,9 +1056,6 @@ msgstr "Kullanım şartları"
 msgid "Date range"
 msgstr "Tarih aralığı"
 
-msgid "Map"
-msgstr "Harita"
-
 msgid "Group of questions"
 msgstr "Soru grubu"
 
@@ -1184,12 +1163,6 @@ msgstr "Siteler"
 
 msgid "Mode:"
 msgstr "Kip:"
-
-msgid "Active"
-msgstr "Etkin"
-
-msgid "Inactive"
-msgstr "Devre dışı"
 
 msgid "Configure"
 msgstr "Yapılandır"
@@ -1540,9 +1513,6 @@ msgstr "Dosya Boyutu"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "İhbarcının rapora eklentiler eklemesine izin ver"
 
-msgid "Never"
-msgstr "Asla"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "İhbarcının mesaj göndermesine izin verin"
 
@@ -1644,9 +1614,6 @@ msgstr "Koruyucu, ihbarcının kimliğine erişim talep etti"
 
 msgid "Date of the request"
 msgstr "Talep tarihi"
-
-msgid "Undeclared"
-msgstr "Beyan edilmemiş"
 
 msgid "Congratulations!"
 msgstr "Tebrikler!"

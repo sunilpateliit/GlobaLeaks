@@ -58,12 +58,14 @@ class SubmissionAttachment(BaseHandler):
     check_roles = 'any'
     upload_handler = True
 
-    def post(self, token_id):
-        token = self.state.tokens.get(token_id)
+    def post(self, submission_id):
+        temp_submission = self.state.TempSubmissions.get(submission_id, None)
+        if temp_submission is None:
+            return
 
         self.uploaded_file['submission'] = True
 
-        token.associate_file(self.uploaded_file)
+        temp_submission.files.append(self.uploaded_file)
 
 
 class PostSubmissionAttachment(SubmissionAttachment):
@@ -76,4 +78,4 @@ class PostSubmissionAttachment(SubmissionAttachment):
     def post(self):
         self.uploaded_file['submission'] = False
 
-        return register_ifile_on_db(self.request.tid, self.current_user.user_id, self.uploaded_file)
+        return register_ifile_on_db(self.request.tid, self.session.user_id, self.uploaded_file)

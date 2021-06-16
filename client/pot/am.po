@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: Suzanne Ferguson\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Amharic (http://www.transifex.com/otf/globaleaks/language/am/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -250,12 +250,6 @@ msgstr "የማንነቶች ሞግዚት"
 msgid "Identity"
 msgstr "ማንነት"
 
-msgid "Available"
-msgstr "አለ"
-
-msgid "Not available"
-msgstr "የለም"
-
 msgid "Access requested"
 msgstr "መድረሻ ተጠይቋል"
 
@@ -346,9 +340,6 @@ msgstr "ጠንካራ"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "በይነገጹ አናት ላይ አገባበ ነገር ለመምረጥ የሚታይ ጽሑፍ"
-
-msgid "Type to search…"
-msgstr "የፍለጋ አይነት"
 
 msgid "Silence email notifications"
 msgstr "የኢሜይል ማሳወቂያዎችን ያጥፋ"
@@ -736,6 +727,9 @@ msgstr " ምልክት"
 msgid "Project name"
 msgstr "የፕሮጀክት ስም"
 
+msgid "Description"
+msgstr "ገለጻ "
+
 msgid "Homepage title"
 msgstr "የመነሻ ገጽ ርዕስ"
 
@@ -795,9 +789,6 @@ msgstr "የቦዘነ"
 
 msgid "Enabled"
 msgstr "ነቅቷል"
-
-msgid "Description"
-msgstr "ገለጻ "
 
 msgid "Questionnaire"
 msgstr "መጠይቅ"
@@ -894,15 +885,6 @@ msgstr "የተሳሳተ ግብኣት ቅርጸት"
 
 msgid "Input should be similar to:"
 msgstr "ግቤት ከ--- ጋር ተመሳሳይ መሆን አለበት"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "እናመስጥር የሚለውን ለመጠቀም ከአግልግሎት ደምቦች ጋር መስማማት ያስፈልጋል"
-
-msgid "Read the Terms of Service"
-msgstr "የአግልግሎት ደምቦችን ያንብቡ"
-
-msgid "I agree to the Terms of Service."
-msgstr "ከአገልግሎት ደምቦች ጋር እስማማለሁ"
 
 msgid "Country code"
 msgstr "የአገር ኮድ"
@@ -1050,9 +1032,6 @@ msgstr "የአገልግሉት ደንብ"
 msgid "Date range"
 msgstr "የቀን ክልል"
 
-msgid "Map"
-msgstr "ካርታ"
-
 msgid "Group of questions"
 msgstr "የጥያቄዎች ቡድን"
 
@@ -1160,12 +1139,6 @@ msgstr "ድረገጾች"
 
 msgid "Mode:"
 msgstr "ሁነታ፡"
-
-msgid "Active"
-msgstr "ገባሪ"
-
-msgid "Inactive"
-msgstr "ያልተመረጠ"
 
 msgid "Configure"
 msgstr "ውቀር"
@@ -1516,9 +1489,6 @@ msgstr "የፋይል መጠን"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "መረጃ ሰጪው ሪፖርቱ ላይ አባሪ እንዲጨምር ፍቀድ"
 
-msgid "Never"
-msgstr "መቼም"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "መረጃ ሰጪው መልእክት እንዲልክ ፍቀድ"
 
@@ -1620,9 +1590,6 @@ msgstr "የመረጃ ሰጪውን ማንነት ለማየት ሞግዚቱ ተጠ�
 
 msgid "Date of the request"
 msgstr "የጥያቄው ቀን"
-
-msgid "Undeclared"
-msgstr "አልተገለጸም"
 
 msgid "Congratulations!"
 msgstr "እንኳን ደስ አሎት!"

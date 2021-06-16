@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Urdu (http://www.transifex.com/otf/globaleaks/language/ur/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -260,12 +260,6 @@ msgstr "تشخص کا محافظ"
 msgid "Identity"
 msgstr "شناخت"
 
-msgid "Available"
-msgstr "دستیاب"
-
-msgid "Not available"
-msgstr "دستیاب نہیں"
-
 msgid "Access requested"
 msgstr "رسائی کی درخواست کی"
 
@@ -356,9 +350,6 @@ msgstr "مظبوط"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "متن سیاق و سباق کے انتخاب کے سامنے دکھایا گیا"
-
-msgid "Type to search…"
-msgstr "تلاش کرنے ٹا ئپ کریں"
 
 msgid "Silence email notifications"
 msgstr "خاموش ای میل کی اطلاعات"
@@ -746,6 +737,9 @@ msgstr ""
 msgid "Project name"
 msgstr "اقدام  کا نام"
 
+msgid "Description"
+msgstr "وضاحت"
+
 msgid "Homepage title"
 msgstr "پہلا صفحہ یا ہوم پیج ٹائٹل "
 
@@ -805,9 +799,6 @@ msgstr "غیر فعال"
 
 msgid "Enabled"
 msgstr "فعال"
-
-msgid "Description"
-msgstr "وضاحت"
 
 msgid "Questionnaire"
 msgstr "سوالنامہ"
@@ -903,15 +894,6 @@ msgid "Invalid input format."
 msgstr ""
 
 msgid "Input should be similar to:"
-msgstr ""
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr ""
-
-msgid "Read the Terms of Service"
-msgstr ""
-
-msgid "I agree to the Terms of Service."
 msgstr ""
 
 msgid "Country code"
@@ -1060,9 +1042,6 @@ msgstr "سروس کی شرائط"
 msgid "Date range"
 msgstr ""
 
-msgid "Map"
-msgstr ""
-
 msgid "Group of questions"
 msgstr "سوالات کے گروپ"
 
@@ -1169,12 +1148,6 @@ msgid "Sites"
 msgstr ""
 
 msgid "Mode:"
-msgstr ""
-
-msgid "Active"
-msgstr ""
-
-msgid "Inactive"
 msgstr ""
 
 msgid "Configure"
@@ -1526,9 +1499,6 @@ msgstr "فائل کا سائز"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "مخبر کو اٹیچمنٹ شامل کرنے کی اجازت دیں"
 
-msgid "Never"
-msgstr "کبھی نہیں"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "مخبر کو پیغامات بھیجنے کی اجازت دیں"
 
@@ -1630,9 +1600,6 @@ msgstr "مخبر کی شناخت تک رسائی نگرانی کرنے کی در
 
 msgid "Date of the request"
 msgstr "درخواست کی تاریخ"
-
-msgid "Undeclared"
-msgstr ""
 
 msgid "Congratulations!"
 msgstr "مبارک ہو!"

@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: Aleksandra Blanusha <ablanusha@transparency.mk>\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Macedonian (http://www.transifex.com/otf/globaleaks/language/mk/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -252,12 +252,6 @@ msgstr "Чувар на идентитетите "
 msgid "Identity"
 msgstr "Идентитет "
 
-msgid "Available"
-msgstr "Достапно "
-
-msgid "Not available"
-msgstr "Недостапно"
-
 msgid "Access requested"
 msgstr "Побаран пристап "
 
@@ -348,9 +342,6 @@ msgstr "Силно "
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Текстот е прикажан на горниот дел од интерфејсот за избор на содржини"
-
-msgid "Type to search…"
-msgstr "Пребарување..."
 
 msgid "Silence email notifications"
 msgstr "Е-маил известувањата ажурирај ги на бесчујно "
@@ -738,6 +729,9 @@ msgstr "Лого"
 msgid "Project name"
 msgstr "Име на проектот"
 
+msgid "Description"
+msgstr "Опис"
+
 msgid "Homepage title"
 msgstr "Наслов на почетна страница "
 
@@ -797,9 +791,6 @@ msgstr "Оневозможено "
 
 msgid "Enabled"
 msgstr "Овозможено"
-
-msgid "Description"
-msgstr "Опис"
 
 msgid "Questionnaire"
 msgstr "Прашалник "
@@ -896,15 +887,6 @@ msgstr "Невалиден формат на внес."
 
 msgid "Input should be similar to:"
 msgstr "Внесот треба да биде сличен на:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Користењето на Да криптираме (Let's Encrypt) бара согласност со нивните Услови на Користење."
-
-msgid "Read the Terms of Service"
-msgstr "Прочитај ги условите "
-
-msgid "I agree to the Terms of Service."
-msgstr "Се согласувам со условите. "
 
 msgid "Country code"
 msgstr "Код на држава "
@@ -1052,9 +1034,6 @@ msgstr "Услови за користење "
 msgid "Date range"
 msgstr "Опсег на датум "
 
-msgid "Map"
-msgstr "Мапа"
-
 msgid "Group of questions"
 msgstr "Група на прашања "
 
@@ -1162,12 +1141,6 @@ msgstr "Страни"
 
 msgid "Mode:"
 msgstr "Модул:"
-
-msgid "Active"
-msgstr "Активно "
-
-msgid "Inactive"
-msgstr "Неактивно"
 
 msgid "Configure"
 msgstr "Конфигурирај"
@@ -1518,9 +1491,6 @@ msgstr "Големина на датотеката "
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Овозможи на укажувачот да прикачува датотеки на пријавата "
 
-msgid "Never"
-msgstr "Никогаш"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Овозможи на укажувачот да испраќа пораки "
 
@@ -1622,9 +1592,6 @@ msgstr "Побарано е пристап до идентитетот на ук
 
 msgid "Date of the request"
 msgstr "Датум на барањето"
-
-msgid "Undeclared"
-msgstr "Непријавено "
 
 msgid "Congratulations!"
 msgstr "Честитки!"

@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/otf/globaleaks/language/zh_TW/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -256,12 +256,6 @@ msgstr "保管人的身份識別"
 msgid "Identity"
 msgstr "身份"
 
-msgid "Available"
-msgstr "可用"
-
-msgid "Not available"
-msgstr "不可用"
-
 msgid "Access requested"
 msgstr "要求存取"
 
@@ -352,9 +346,6 @@ msgstr "強"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "介面上方會顯示所選擇內文文字"
-
-msgid "Type to search…"
-msgstr "輸入欲搜尋"
 
 msgid "Silence email notifications"
 msgstr "對電子郵件通知消音"
@@ -742,6 +733,9 @@ msgstr "Logo"
 msgid "Project name"
 msgstr "專案名稱"
 
+msgid "Description"
+msgstr "描述"
+
 msgid "Homepage title"
 msgstr "網頁標題"
 
@@ -801,9 +795,6 @@ msgstr "關閉"
 
 msgid "Enabled"
 msgstr "啟用"
-
-msgid "Description"
-msgstr "描述"
 
 msgid "Questionnaire"
 msgstr "問卷"
@@ -900,15 +891,6 @@ msgstr "無效的輸入格式"
 
 msgid "Input should be similar to:"
 msgstr "輪入應相這樣："
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "使用Let's Encrypt需要先同意他們的服務條款"
-
-msgid "Read the Terms of Service"
-msgstr "閱課"
-
-msgid "I agree to the Terms of Service."
-msgstr "我同意這份服務个款"
 
 msgid "Country code"
 msgstr "國碼"
@@ -1056,9 +1038,6 @@ msgstr "服務條款"
 msgid "Date range"
 msgstr "日期範圍"
 
-msgid "Map"
-msgstr "地圖"
-
 msgid "Group of questions"
 msgstr "問題題組"
 
@@ -1166,12 +1145,6 @@ msgstr "網站"
 
 msgid "Mode:"
 msgstr "模式："
-
-msgid "Active"
-msgstr "活躍中的"
-
-msgid "Inactive"
-msgstr "靜止狀態的"
 
 msgid "Configure"
 msgstr "設定"
@@ -1522,9 +1495,6 @@ msgstr "檔案大小"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "揭密者可對此報告附加資料檔案"
 
-msgid "Never"
-msgstr "絕不要"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "允許吹哨者傳送訊息"
 
@@ -1626,9 +1596,6 @@ msgstr "保管人要求取得吹哨者身份識別"
 
 msgid "Date of the request"
 msgstr "提出要求的日期"
-
-msgid "Undeclared"
-msgstr "未作宣告的"
 
 msgid "Congratulations!"
 msgstr "恭喜！"

@@ -77,12 +77,14 @@ api_spec = [
     (r'/api/token/' + requests.token_regexp, token.TokenInstance),
 
     # Submission Handlers
-    (r'/api/submission/' + requests.token_regexp, submission.SubmissionInstance),
-    (r'/api/submission/' + requests.token_regexp + r'/file', attachment.SubmissionAttachment),
+    (r'/api/submission/', submission.SubmissionInstance),
+    (r'/api/submission/' + uuid_regexp, submission.SubmissionInstance),
+    (r'/api/submission/' + uuid_regexp + '/attachment', attachment.SubmissionAttachment),
 
     # Receiver Handlers
     (r'/api/recipient/operations', receiver.Operations),
     (r'/api/rtips', receiver.TipsCollection),
+    (r'/api/rtips/export', export.ExportAllHandler),
     (r'/api/rtips/' + uuid_regexp, rtip.RTipInstance),
     (r'/api/rtips/' + uuid_regexp + r'/comments', rtip.RTipCommentCollection),
     (r'/api/rtips/' + uuid_regexp + r'/messages', rtip.ReceiverMsgCollection),
@@ -272,6 +274,7 @@ class APIResourceWrapper(Resource):
         request.headers = request.getAllHeaders()
         request.hostname = request.getRequestHostname()
         request.port = request.getHost().port
+        request.multilang = False
 
         if (not State.tenant_cache[1].wizard_done or
             request.hostname == b'localhost' or
@@ -312,7 +315,7 @@ class APIResourceWrapper(Resource):
 
         request.language = self.detect_language(request)
         if b'multilang' in request.args:
-            request.language = None
+            request.multilang = True
 
     def render(self, request):
         """
@@ -461,10 +464,11 @@ class APIResourceWrapper(Resource):
         # - In order to evaluate code coverage with istanbuljs/nyc
         # - In order to be able to manually retest if it is correctly implemented
         if not State.settings.disable_csp:
-            csp = "default-src 'none';" \
-                  "script-src 'self' 'sha256-deqnDNmuiUUIybUybVmSDSwpWO3hlCGA997lDHVOBcg=';" \
+            csp = "base-uri 'none';" \
+                  "default-src 'none';" \
                   "connect-src 'self';" \
-                  "style-src 'self';" \
+                  "style-src 'self' 'sha256-fwyo2zCGlh85NfN4rQUlpLM7MB5cry/1AEDA/G9mQJ8=';" \
+                  "script-src 'self' 'sha256-IYBZitj/YWbzjFFnwLPjJJmMGdSj923kzu2tdCxLKdU=';" \
                   "img-src 'self' data:;" \
                   "font-src 'self' data:;" \
                   "media-src 'self';" \
@@ -517,13 +521,10 @@ class APIResourceWrapper(Resource):
         else:
             request.setHeader(b'X-Check-Tor', b'False')
 
-        if request.language:
-            request.setHeader(b'Content-Language', request.language)
+        request.setHeader(b'Content-Language', request.language)
 
     def detect_language(self, request):
-        if request.tid is None:
-            return 'en'
-
+        tid = request.tid if request.tid else 1
         locales = []
         for language in request.headers.get(b'accept-language', b'').decode().split(","):
             parts = language.strip().split(";")
@@ -535,11 +536,11 @@ class APIResourceWrapper(Resource):
             else:
                 score = 1.0
 
-            if parts[0] in State.tenant_cache[request.tid].languages_enabled:
+            if parts[0] in State.tenant_cache[tid].languages_enabled:
                 locales.append((parts[0], score))
 
         if locales:
             locales.sort(key=lambda pair: pair[1], reverse=True)
             return locales[0][0]
 
-        return State.tenant_cache[request.tid].default_language
+        return State.tenant_cache[tid].default_language

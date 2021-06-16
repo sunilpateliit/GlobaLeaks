@@ -30,8 +30,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: Max Moiseev <max.moiseev@chamber.fi>\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Russian (http://www.transifex.com/otf/globaleaks/language/ru/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -275,12 +275,6 @@ msgstr "Хранитель личностей"
 msgid "Identity"
 msgstr "Личность"
 
-msgid "Available"
-msgstr "Доступно"
-
-msgid "Not available"
-msgstr "Недоступно"
-
 msgid "Access requested"
 msgstr "Доступ запрошен"
 
@@ -371,9 +365,6 @@ msgstr "Сильная"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Текст, отображаемый над интерфейсом выбора контекстов"
-
-msgid "Type to search…"
-msgstr "Введите термин для поиска..."
 
 msgid "Silence email notifications"
 msgstr "Заглушить уведомления по эл. почте"
@@ -761,6 +752,9 @@ msgstr "Логотип"
 msgid "Project name"
 msgstr "Название инициативы"
 
+msgid "Description"
+msgstr "Описание"
+
 msgid "Homepage title"
 msgstr "Заголовок домашней страницы"
 
@@ -820,9 +814,6 @@ msgstr "Отключено"
 
 msgid "Enabled"
 msgstr "Включено"
-
-msgid "Description"
-msgstr "Описание"
 
 msgid "Questionnaire"
 msgstr "Опросник"
@@ -919,15 +910,6 @@ msgstr "Недопустимый формат ввода."
 
 msgid "Input should be similar to:"
 msgstr "Ввод должен быть похож на:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Использование Let's Encrypt требует согласия с их условиями обслуживания."
-
-msgid "Read the Terms of Service"
-msgstr "Читать условия обслуживания"
-
-msgid "I agree to the Terms of Service."
-msgstr "Я соглашаюсь с условиями обслуживания."
 
 msgid "Country code"
 msgstr "Код страны"
@@ -1075,9 +1057,6 @@ msgstr "Условия обслуживания"
 msgid "Date range"
 msgstr "Диапазон дат"
 
-msgid "Map"
-msgstr "Карта"
-
 msgid "Group of questions"
 msgstr "Группа вопросов"
 
@@ -1185,12 +1164,6 @@ msgstr "Сайты"
 
 msgid "Mode:"
 msgstr "Режим:"
-
-msgid "Active"
-msgstr "Активно"
-
-msgid "Inactive"
-msgstr "Неактивный"
 
 msgid "Configure"
 msgstr "Настроить"
@@ -1541,9 +1514,6 @@ msgstr "Размер файла"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Разрешить информатору добавлять приложения к поданным документам"
 
-msgid "Never"
-msgstr "Никогда"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Разрешить информатору отправлять комментарии"
 
@@ -1645,9 +1615,6 @@ msgstr "К хранителю поступил запрос о доступе к
 
 msgid "Date of the request"
 msgstr "Дата запроса"
-
-msgid "Undeclared"
-msgstr "Не объявлен"
 
 msgid "Congratulations!"
 msgstr "Поздравляем!"

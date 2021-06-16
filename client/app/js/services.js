@@ -86,19 +86,19 @@ factory("Authentication",
 
         return new TokenResource().$get().then(function(token) {
           if (authtoken) {
-            return $http.post("api/tokenauth", {"authtoken": authtoken, "token": token.id}).
+            return $http.post("api/tokenauth?token=" + token.id, {"authtoken": authtoken}).
               then(success_fn, function() {
                 self.loginInProgress = false;
               });
           } else {
             if (username === "whistleblower") {
               password = password.replace(/\D/g,"");
-              return $http.post("api/receiptauth", {"receipt": password, "token": token.id}).
+              return $http.post("api/receiptauth?token=" + token.id, {"receipt": password}).
                 then(success_fn, function() {
                   self.loginInProgress = false;
                 });
             } else {
-            return $http.post("api/authentication", {"tid": tid, "username": username, "password": password, "authcode": authcode, "token": token.id}).
+            return $http.post("api/authentication?token=" + token.id, {"tid": tid, "username": username, "password": password, "authcode": authcode}).
               then(success_fn, function() {
                 self.loginInProgress = false;
               });
@@ -182,11 +182,7 @@ factory("Access", ["$q", "Authentication", function ($q, Authentication) {
     },
 
     isAuthenticated: function (role) {
-      // acl is a special auth level meaning that access is conditional on
-      // backend flags and the only way to know for sure if a given op will
-      // work is to test
-
-      if (Authentication.session && (role === "*" || role === "acl" || Authentication.session.role === role)) {
+      if (Authentication.session && (role === "*" || Authentication.session.role === role)) {
         return $q.resolve(Access.OK);
       } else {
         return $q.reject(Access.FORBIDDEN);
@@ -218,7 +214,7 @@ factory("TokenResource", ["GLResource", "glbcProofOfWork", function(GLResource, 
   });
 }]).
 factory("SubmissionResource", ["GLResource", function(GLResource) {
-  return new GLResource("api/submission/:id", {id: "@token_id"});
+  return new GLResource("api/submission/:id?token=:token_id", {id: "@id", token_id: "@token_id"});
 }]).
 factory("FieldAttrs", ["$resource", function($resource) {
   return $resource("data/field_attrs.json");
@@ -295,6 +291,7 @@ factory("Submission", ["$q", "GLResource", "$filter", "$location", "$rootScope",
       self.setContextReceivers(context_id);
 
       self._submission = new SubmissionResource({
+        id: null,
         context_id: self.context.id,
         receivers: [],
         identity_provided: false,
@@ -305,8 +302,10 @@ factory("Submission", ["$q", "GLResource", "$filter", "$location", "$rootScope",
       });
 
       new TokenResource().$get().then(function(token) {
-        self.token = token;
-        self._submission.token_id = token.id;
+        new SubmissionResource().$get({'token_id': token.id}).then(function(ret) {
+          self.id = ret.id;
+	  self._submission.id = ret.id;
+	});
       });
     };
 
@@ -328,11 +327,13 @@ factory("Submission", ["$q", "GLResource", "$filter", "$location", "$rootScope",
         }
       });
 
-      return self._submission.$update(function(result) {
-        if (result) {
-          $rootScope.receipt = self._submission.receipt;
-          $rootScope.setPage("receiptpage");
-        }
+      return new TokenResource().$get().then(function(token) {
+        return self._submission.$update({'token_id': token.id}).then(function(result) {
+          if (result) {
+            $rootScope.receipt = self._submission.receipt;
+            $rootScope.setPage("receiptpage");
+          }
+        });
       });
     };
 
@@ -351,40 +352,27 @@ factory("RTipMessageResource", ["GLResource", function(GLResource) {
 factory("RTipIdentityAccessRequestResource", ["GLResource", function(GLResource) {
   return new GLResource("api/rtips/:id/iars", {id: "@id"});
 }]).
-factory("RTipDownloadRFile", ["$http", "FileSaver", function($http, FileSaver) {
+factory("RTipDownloadRFile", ["$http", "$window", "TokenResource", function($http, $window, TokenResource) {
   return function(file) {
-    return $http({
-      method: "GET",
-      url: "api/rfile/" + file.id,
-      responseType: "blob",
-    }).then(function (response) {
-      FileSaver.saveAs(response.data, file.status === "encrypted" ? file.name + ".pgp" : file.name);
+    return new TokenResource().$get().then(function(token) {
+      $window.open("api/rfile/" + file.id + "?token=" + token.id);
     });
   };
 }]).
 factory("RTipWBFileResource", ["GLResource", function(GLResource) {
   return new GLResource("api/wbfile/:id", {id: "@id"});
 }]).
-factory("RTipDownloadWBFile", ["$http", "FileSaver", function($http, FileSaver) {
+factory("RTipDownloadWBFile", ["$http", "$window", "TokenResource", function($http, $window, TokenResource) {
   return function(file) {
-    return $http({
-      method: "GET",
-      url: "api/wbfile/" + file.id,
-      responseType: "blob",
-    }).then(function (response) {
-      FileSaver.saveAs(response.data, file.name);
+    return new TokenResource().$get().then(function(token) {
+      $window.open("api/wbfile/" + file.id + "?token=" + token.id);
     });
   };
 }]).
-factory("RTipExport", ["$http", "$filter", "FileSaver", function($http, $filter, FileSaver) {
+factory("RTipExport", ["$http", "$window", "TokenResource", function($http, $window, TokenResource) {
   return function(tip) {
-    $http({
-      method: "GET",
-      url: "api/rtips/" + tip.id + "/export",
-      responseType: "blob",
-    }).then(function (response) {
-      var filename = "submission-" + tip.progressive + ".zip";
-      FileSaver.saveAs(response.data, filename);
+    return new TokenResource().$get().then(function(token) {
+      $window.open("api/rtips/" + tip.id + "/export?token=" + token.id);
     });
   };
 }]).
@@ -459,14 +447,10 @@ factory("WBTipCommentResource", ["GLResource", function(GLResource) {
 factory("WBTipMessageResource", ["GLResource", function(GLResource) {
   return new GLResource("api/wbtip/messages/:id", {id: "@id"});
 }]).
-factory("WBTipDownloadFile", ["$http", "FileSaver", function($http, FileSaver) {
+factory("WBTipDownloadFile", ["$http", "$window", "TokenResource", function($http, $window, TokenResource) {
   return function(file) {
-    return $http({
-      method: "GET",
-      url: "api/wbtip/wbfile/" + file.id,
-      responseType: "blob",
-    }).then(function (response) {
-      FileSaver.saveAs(response.data, file.name);
+    return new TokenResource().$get().then(function(token) {
+      $window.open("api/wbtip/wbfile/" + file.id + "?token=" + token.id);
     });
   };
 }]).
@@ -796,10 +780,12 @@ factory("Utils", ["$rootScope", "$http", "$q", "$location", "$filter", "$uibModa
         $rootScope.pt = pt1;
       } else if (pt2) {
         $rootScope.pt = pt2;
+      } else {
+        $rootScope.pt = "GlobaLeaks";
       }
 
       $window.document.title = $rootScope.pt;
-      $window.document.getElementsByName('description')[0].content = $rootScope.public.node.description;
+      $window.document.getElementsByName("description")[0].content = $rootScope.public.node.description;
     },
 
     route_check: function() {
@@ -1048,8 +1034,8 @@ factory("Utils", ["$rootScope", "$http", "$q", "$location", "$filter", "$uibModa
       $window.print();
     },
 
-    scrollToTop: function(id) {
-      $window.document.getElementByTagName('body').scrollIntoView();
+    scrollToTop: function() {
+      $window.document.getElementsByTagName("body")[0].scrollIntoView();
     },
 
     download: function(filename, url) {
@@ -1409,14 +1395,6 @@ factory("fieldUtilities", ["$filter", "$http", "CONSTANTS", function($filter, $h
           field.children.forEach(function(field) {
             self.parseField(field, parsedFields);
           });
-        } else if (field.type === "map") {
-          $http.get(field.attrs.topojson.value).then(function(response) {
-            field.attrs.topojson.geojson = self.topoToGeo(response.data);
-            field.attrs.topojson.id_name_map = {};
-            field.attrs.topojson.geojson.features.forEach(function(feature) {
-              field.attrs.topojson.id_name_map[feature.id] = feature.properties.name;
-            });
-          });
         }
 
         return parsedFields;
@@ -1440,10 +1418,6 @@ factory("fieldUtilities", ["$filter", "$http", "CONSTANTS", function($filter, $h
         });
 
         return parsedFields;
-      },
-
-      topoToGeo: function(data) {
-        return topojson.feature(data, data.objects[Object.keys(data.objects)[0]]);
       }
     };
 }]).
@@ -1455,21 +1429,11 @@ factory("GLTranslate", ["$translate", "$location", "$window", "tmhDynamicLocale"
     userChoice: null,
     urlParam: null,
     userPreference: null,
-    browserSniff: null,
     nodeDefault: null
   };
 
   // This is a value set by the public.node.
   var enabledLanguages = [];
-
-  // Country codes with multiple languages or an '_XX' extension
-  var problemLangs = {
-    "zh": ["CN", "TW"],
-    "pt": ["BR", "PT"],
-    "nb": "NO",
-    "hr": "HR",
-    "hu": "HU",
-  };
 
   var state = {
     language: null
@@ -1483,40 +1447,7 @@ factory("GLTranslate", ["$translate", "$location", "$window", "tmhDynamicLocale"
       facts.urlParam = queryLang;
     }
 
-    var s = normalizeLang(window.navigator.language);
-    if (validLang(s)) {
-      facts.browserSniff = s;
-    }
-
     determineLanguage();
-  }
-
-  // normalizeLang attempts to map input language strings to the transifex format.
-  function normalizeLang(s) {
-    if (typeof s !== "string") {
-      return "";
-    }
-
-    if (s.length !== 2 && s.length !== 5) {
-      // The string is not in a format we are expecting so just return it.
-      return s;
-    }
-
-    // The string is probably a valid ISO 639-1 language.
-    var iso_lang = s.slice(0,2).toLowerCase();
-
-    if (problemLangs.hasOwnProperty(iso_lang)) {
-
-      var t = problemLangs[iso_lang];
-      if (t instanceof Array) {
-        // We do not know which extension to use, so just use the most popular one.
-        return iso_lang + "_" + t[0];
-      }
-      return iso_lang + "_" + t;
-
-    } else {
-      return iso_lang;
-    }
   }
 
   function validLang(inp) {
@@ -1586,15 +1517,13 @@ factory("GLTranslate", ["$translate", "$location", "$window", "tmhDynamicLocale"
   // defined.
   // { object -> string }
   function bestLanguage(facts) {
-    var lang = null;
+    var lang = "*";
     if (isSelectable(facts.userChoice)) {
       lang = facts.userChoice;
     } else if (isSelectable(facts.urlParam)) {
       lang = facts.urlParam;
     } else if (isSelectable(facts.userPreference)) {
       lang = facts.userPreference;
-    } else if (isSelectable(facts.browserSniff)) {
-      lang = facts.browserSniff;
     } else if (isSelectable(facts.nodeDefault)) {
       lang = facts.nodeDefault;
     }
@@ -1606,10 +1535,9 @@ factory("GLTranslate", ["$translate", "$location", "$window", "tmhDynamicLocale"
   // factory. It finds the best language to use, changes the language
   // pointer, and notifies the dependent services of the change.
   function determineLanguage() {
-    state.language = bestLanguage(facts);
-    if (state.language) {
+    GL.language = state.language = bestLanguage(facts);
+    if (state.language !== "*") {
       updateTranslationServices(state.language);
-      GL.language = state.language;
       $window.document.getElementsByTagName("html")[0].setAttribute("lang", state.language);
     }
   }

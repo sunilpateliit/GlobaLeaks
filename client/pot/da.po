@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: Noah Böhme <noah0907@gmail.com>\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Danish (http://www.transifex.com/otf/globaleaks/language/da/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -257,12 +257,6 @@ msgstr "Den ansvarlige for identiteterne"
 msgid "Identity"
 msgstr "Identitet"
 
-msgid "Available"
-msgstr "Tilgængelig"
-
-msgid "Not available"
-msgstr "Ikke tilgængelig"
-
 msgid "Access requested"
 msgstr "Adgang anmodet"
 
@@ -353,9 +347,6 @@ msgstr "Stærk"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Tekst der vises øverst på det interface hvor sammenhænge vælges"
-
-msgid "Type to search…"
-msgstr "Skriv for at søge..."
 
 msgid "Silence email notifications"
 msgstr "Slå e-mail-notifikation fra"
@@ -743,6 +734,9 @@ msgstr "Logo"
 msgid "Project name"
 msgstr "Projektnavn"
 
+msgid "Description"
+msgstr "Beskrivelse"
+
 msgid "Homepage title"
 msgstr "Titel på hjemmesiden"
 
@@ -802,9 +796,6 @@ msgstr "Deaktiveret"
 
 msgid "Enabled"
 msgstr "Aktiveret"
-
-msgid "Description"
-msgstr "Beskrivelse"
 
 msgid "Questionnaire"
 msgstr "Spørgeskema"
@@ -901,15 +892,6 @@ msgstr "Ugyldigt inputformat"
 
 msgid "Input should be similar to:"
 msgstr "Input skal svare til:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Brug af Let's Encrypt kræver accept af deres servicevilkår."
-
-msgid "Read the Terms of Service"
-msgstr "Læs servicebetingelserne"
-
-msgid "I agree to the Terms of Service."
-msgstr "Jeg godkender hermed servicebetingelserne."
 
 msgid "Country code"
 msgstr "Landekode"
@@ -1057,9 +1039,6 @@ msgstr "Servicevillkår"
 msgid "Date range"
 msgstr "Datointerval"
 
-msgid "Map"
-msgstr "Kort"
-
 msgid "Group of questions"
 msgstr "Gruppe af spørgsmål"
 
@@ -1167,12 +1146,6 @@ msgstr "Sider"
 
 msgid "Mode:"
 msgstr "Tilstand:"
-
-msgid "Active"
-msgstr "Aktiv"
-
-msgid "Inactive"
-msgstr "Inaktiv"
 
 msgid "Configure"
 msgstr "Konfigurer"
@@ -1523,9 +1496,6 @@ msgstr "Filstørrelse"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Tillad whistlebloweren at tilføje vedhæftelser til indsendelsen"
 
-msgid "Never"
-msgstr "Aldrig"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Tillad whistlebloweren at sende beskeder"
 
@@ -1627,9 +1597,6 @@ msgstr "Forespørgsel om whistleblowerens identitet er blevet videregivet til de
 
 msgid "Date of the request"
 msgstr "Dato for forespørgslen"
-
-msgid "Undeclared"
-msgstr "Uerklæret"
 
 msgid "Congratulations!"
 msgstr "Tillykke!"

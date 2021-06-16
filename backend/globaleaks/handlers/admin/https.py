@@ -38,7 +38,6 @@ def load_tls_dict(session, tid):
     }
 
 
-
 def load_tls_dict_list(session):
     return [load_tls_dict(session, tid[0]) for tid in session.query(models.Tenant.id).filter(models.Tenant.active.is_(True))]
 
@@ -181,12 +180,14 @@ class CertFileRes(FileResource):
     @staticmethod
     def db_serialize(session, tid):
         c = ConfigFactory(session, tid).get_val('https_cert')
-        if len(c) == 0:
+        if not c:
             return {
                 'name': 'cert',
                 'set': False
             }
 
+        log.err(c)
+        c = """{}""".format(c)
         x509 = crypto.load_certificate(crypto.FILETYPE_PEM, c)
         expr_date = letsencrypt.convert_asn1_date(x509.get_notAfter())
 
@@ -229,12 +230,13 @@ class ChainFileRes(FileResource):
     @staticmethod
     def db_serialize(session, tid):
         c = ConfigFactory(session, tid).get_val('https_chain')
-        if len(c) == 0:
+        if not c:
             return {
                 'name': 'chain',
                 'set': False
             }
 
+        c = tls.split_pem_chain(c)[0]
         x509 = crypto.load_certificate(crypto.FILETYPE_PEM, c)
         expr_date = letsencrypt.convert_asn1_date(x509.get_notAfter())
 
@@ -474,11 +476,7 @@ class AcmeHandler(BaseHandler):
     @inlineCallbacks
     def post(self):
         accnt_key = yield AcmeAccntKeyRes.create_file(self.request.tid)
-        tos_url = letsencrypt.get_boulder_tos(Settings.acme_directory_url, accnt_key)
-        returnValue({'terms_of_service': tos_url})
-
-    def put(self):
-        return tw(db_acme_cert_request, self.request.tid)
+        yield tw(db_acme_cert_request, self.request.tid)
 
 
 class AcmeChallengeHandler(BaseHandler):

@@ -39,8 +39,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: C. E.\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/otf/globaleaks/language/pt_BR/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -284,12 +284,6 @@ msgstr "Custodiante das identidades"
 msgid "Identity"
 msgstr "Identidade"
 
-msgid "Available"
-msgstr "Disponível"
-
-msgid "Not available"
-msgstr "Indisponível"
-
 msgid "Access requested"
 msgstr "Acesso requerido"
 
@@ -380,9 +374,6 @@ msgstr "Forte"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Texto exibido no início da página de seleção de assuntos"
-
-msgid "Type to search…"
-msgstr "Tipo de pesquisa..."
 
 msgid "Silence email notifications"
 msgstr "Desabilitar notificações de e-mails"
@@ -770,6 +761,9 @@ msgstr "Logotipo"
 msgid "Project name"
 msgstr "Nome da iniciativa"
 
+msgid "Description"
+msgstr "Descrição"
+
 msgid "Homepage title"
 msgstr "Título da Página Principal"
 
@@ -829,9 +823,6 @@ msgstr "Desabilitado"
 
 msgid "Enabled"
 msgstr "Habilitado"
-
-msgid "Description"
-msgstr "Descrição"
 
 msgid "Questionnaire"
 msgstr "Questionário"
@@ -928,15 +919,6 @@ msgstr "Inválido formato de entrada."
 
 msgid "Input should be similar to:"
 msgstr "Entrada deveria ser semelhante a:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Usando a Autoridade Certificadora Let's Encrypt exige um de acordo com os termos de uso de serviço."
-
-msgid "Read the Terms of Service"
-msgstr "Ler os termos de licença"
-
-msgid "I agree to the Terms of Service."
-msgstr "Concordo com os termos de licença."
 
 msgid "Country code"
 msgstr "Código do país"
@@ -1084,9 +1066,6 @@ msgstr "Termos do serviço"
 msgid "Date range"
 msgstr "Intervalo de datas"
 
-msgid "Map"
-msgstr "Mapa"
-
 msgid "Group of questions"
 msgstr "Grupo de perguntas"
 
@@ -1194,12 +1173,6 @@ msgstr "Sites"
 
 msgid "Mode:"
 msgstr "Modo:"
-
-msgid "Active"
-msgstr "Ativado"
-
-msgid "Inactive"
-msgstr "Inativo"
 
 msgid "Configure"
 msgstr "Configurar"
@@ -1550,9 +1523,6 @@ msgstr "Tamanho do arquivo"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Permitir o delator adicionar anexos a submissão"
 
-msgid "Never"
-msgstr "Jamais"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Permitir que o delator envie mensagens"
 
@@ -1654,9 +1624,6 @@ msgstr "Acesso à identidade de um delator foi solicitado ao curador."
 
 msgid "Date of the request"
 msgstr "Data do pedido"
-
-msgid "Undeclared"
-msgstr "Não declarado"
 
 msgid "Congratulations!"
 msgstr "Parabéns!"

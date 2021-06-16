@@ -1,4 +1,76 @@
+<<<<<<< HEAD
 Changes in version 4.2.0
+=======
+Changes in version 4.2.10
+    Implement possibility to export all reports at once (#2824)
+    Refactor Token implementation and separate it from Submission state
+    Assign access_report audit log to secondary tenants
+    Revise colors of the application in relation to style guidelines
+    Change logo version and optimize size
+    Update Tibetan translation (ongoing trranslation updated for revision purposes)
+    Fix native language name for Swahili (Kiswahili)
+    Update translations
+
+Changes in version 4.2.9
+    Fix issue #3007 preventing new setups of globaleaks 4.2.8
+    Fix password reset functionality in relation to pyotp dependency removal
+    Revise min_len and max_len input validations in relation to IE 11
+    Add Tibetan translation (ongoin translation added for revision purposes)
+    Update translations
+
+Changes in version 4.2.8
+    Update translations for revision purposes
+
+Changes in version 4.2.7
+    Fix functionality of import of questionnaires
+    Fix loading of intermediate chain composed by more than one certificate
+    Bump npm dependencies to latest versions
+    Add Kramer translation (ongoing translation added for revision purposes)
+    Add Uyghur translation (ongoing translation added for revision purposes)
+    Update translations
+
+Changes in version 4.2.6
+    Add Bengali translation
+    Add Lao translation
+    Add Malayan translation
+    Improve usability of drop down with >=10 choices
+    Update translations
+    Bump npm dependencies to latest versions
+
+Changes in version 4.2.5
+    Fix bug on file delivery in mixed PGP / non PGP configurations
+    Add Burmese translation
+    Add Chinese (Hong Kong) translation
+    Update translations
+    Bump npm dependencies to latest versions
+
+Changes in version 4.2.4
+    Fix issue #2998 affecting migration 54i, impacting releases 4.2.0-3
+    and causing corruption of files attached by administrators for
+    platform customization.
+    Fix issue #2995
+    Fix bug on notification to recipients of their own messages
+
+Changes in version 4.2.3
+    Improve readability of home page revisiting font-sites and margins
+    Getting sure to filter white spaces when using ip addresses filters
+    Fix issue #2993
+
+Changes in version 4.2.2
+    Ignore browser language and prefer platform default
+    Set Log job timing to 30 seconds
+    Fix lint error affecting Log job shutdown
+    Make update notifications subject to admin notifications enablers
+    Fix issue #2991
+
+Changes in version 4.2.1
+    Fix regression on removal on reset of anomaly counter
+    Revise files handlers for proper management of contexts and users images
+
+Changes in version 4.2.0
+    Improve set of audit log events traking main events related to
+    authentication, password reset, reports access and deletion (#2579)
+>>>>>>> upstream/main
     Optimize database removing redundant previous overengineering
     Prevent that the submission status could be reverted to new
     Improve resiliency adding limits to the numer of emails and files

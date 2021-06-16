@@ -249,8 +249,7 @@ def db_receiver_get_rfile_list(session, rtip_id):
     :return: A list of serializations of the retrieved models
     """
     rfiles = session.query(models.ReceiverFile) \
-                    .filter(models.ReceiverFile.receivertip_id == rtip_id,
-                            models.ReceiverFile.status != 'unavailable')
+                    .filter(models.ReceiverFile.receivertip_id == rtip_id)
 
     return [receiver_serialize_rfile(session, rfile) for rfile in rfiles]
 
@@ -705,12 +704,12 @@ class RTipInstance(OperationHandler):
 
     @inlineCallbacks
     def get(self, tip_id):
-        tip, crypto_tip_prv_key = yield get_rtip(self.request.tid, self.current_user.user_id, tip_id, self.request.language)
+        tip, crypto_tip_prv_key = yield get_rtip(self.request.tid, self.session.user_id, tip_id, self.request.language)
 
         if State.tenant_cache[self.request.tid].encryption and crypto_tip_prv_key:
-            tip = yield deferToThread(decrypt_tip, self.current_user.cc, crypto_tip_prv_key, tip)
+            tip = yield deferToThread(decrypt_tip, self.session.cc, crypto_tip_prv_key, tip)
 
-        self.state.log(type='access_report', user_id=self.current_user.user_id, object_id=tip['internaltip_id'])
+        self.state.log(tid=self.session.tid, type='access_report', user_id=self.session.user_id, object_id=tip['internaltip_id'])
 
         returnValue(tip)
 
@@ -731,28 +730,28 @@ class RTipInstance(OperationHandler):
         key = req_args['key']
 
         if key == 'enable_notifications':
-            return set_receivertip_variable(self.request.tid, self.current_user.user_id, tip_id, key, value)
+            return set_receivertip_variable(self.request.tid, self.session.user_id, tip_id, key, value)
 
-        return set_internaltip_variable(self.request.tid, self.current_user.user_id, tip_id, key, value)
+        return set_internaltip_variable(self.request.tid, self.session.user_id, tip_id, key, value)
 
     def postpone_expiration(self, _, tip_id, *args, **kwargs):
-        return postpone_expiration(self.request.tid, self.current_user.user_id, tip_id)
+        return postpone_expiration(self.request.tid, self.session.user_id, tip_id)
 
     def update_important(self, req_args, tip_id, *args, **kwargs):
-        return update_important(self.request.tid, self.current_user.user_id, tip_id, req_args['value'])
+        return update_important(self.request.tid, self.session.user_id, tip_id, req_args['value'])
 
     def update_label(self, req_args, tip_id, *args, **kwargs):
-        return update_label(self.request.tid, self.current_user.user_id, tip_id, req_args['value'])
+        return update_label(self.request.tid, self.session.user_id, tip_id, req_args['value'])
 
     def update_submission_status(self, req_args, tip_id, *args, **kwargs):
-        return update_tip_submission_status(self.request.tid, self.current_user.user_id, tip_id,
+        return update_tip_submission_status(self.request.tid, self.session.user_id, tip_id,
                                             req_args['status'], req_args['substatus'])
 
     def delete(self, tip_id):
         """
         Remove the Internaltip and all the associated data
         """
-        return delete_rtip(self.request.tid, self.current_user.user_id, tip_id)
+        return delete_rtip(self.request.tid, self.session.user_id, tip_id)
 
 
 class RTipCommentCollection(BaseHandler):
@@ -764,7 +763,7 @@ class RTipCommentCollection(BaseHandler):
     def post(self, tip_id):
         request = self.validate_message(self.request.content.read(), requests.CommentDesc)
 
-        return create_comment(self.request.tid, self.current_user.user_id, tip_id, request['content'])
+        return create_comment(self.request.tid, self.session.user_id, tip_id, request['content'])
 
 
 class ReceiverMsgCollection(BaseHandler):
@@ -776,7 +775,7 @@ class ReceiverMsgCollection(BaseHandler):
     def post(self, tip_id):
         request = self.validate_message(self.request.content.read(), requests.CommentDesc)
 
-        return create_message(self.request.tid, self.current_user.user_id, tip_id, request['content'])
+        return create_message(self.request.tid, self.session.user_id, tip_id, request['content'])
 
 
 class WhistleblowerFileHandler(BaseHandler):
@@ -788,7 +787,7 @@ class WhistleblowerFileHandler(BaseHandler):
 
     @transact
     def can_perform_action(self, session, tid, tip_id, filename):
-        rtip, _ = db_access_rtip(session, tid, self.current_user.user_id, tip_id)
+        rtip, _ = db_access_rtip(session, tid, self.session.user_id, tip_id)
 
         enable_rc_to_wb_files = session.query(models.Context.enable_rc_to_wb_files) \
                                        .filter(models.Context.id == models.InternalTip.context_id,
@@ -813,6 +812,8 @@ class WBFileHandler(BaseHandler):
     This class is used in both RTip and WBTip to define a base for respective handlers
     """
     check_roles = 'receiver'
+    require_token = [b'GET']
+    handler_exec_time_threshold = 3600
 
     def user_can_access(self, session, tid, wbfile):
         raise NotImplementedError("This class defines the user_can_access interface.")
@@ -822,15 +823,17 @@ class WBFileHandler(BaseHandler):
 
     @transact
     def download_wbfile(self, session, tid, file_id):
-        wbfile, wbtip, rtip = db_get(session,
-                                     (models.WhistleblowerFile,
-                                      models.WhistleblowerTip,
-                                      models.ReceiverTip),
-                                     (models.WhistleblowerFile.id == file_id,
-                                      models.WhistleblowerFile.receivertip_id == models.ReceiverTip.id,
-                                      models.ReceiverTip.internaltip_id == models.WhistleblowerTip.id))
+        wbfile, wbtip, = db_get(session,
+                                (models.WhistleblowerFile,
+                                 models.WhistleblowerTip),
+                                (models.WhistleblowerFile.id == file_id,
+                                 models.WhistleblowerFile.receivertip_id == models.ReceiverTip.id,
+                                 models.ReceiverTip.internaltip_id == models.WhistleblowerTip.id))
 
-        if not self.user_can_access(session, tid, wbfile):
+        rtip = session.query(models.ReceiverTip) \
+                      .filter(models.ReceiverTip.receiver_id == self.session.user_id,
+                              models.ReceiverTip.internaltip_id == wbtip.id).one_or_none()
+        if not rtip:
             raise errors.ResourceNotFound()
 
         self.access_wbfile(session, wbfile)
@@ -846,7 +849,8 @@ class WBFileHandler(BaseHandler):
         directory_traversal_check(Settings.attachments_path, filelocation)
 
         if tip_prv_key:
-            tip_prv_key = GCE.asymmetric_decrypt(self.current_user.cc, tip_prv_key)
+            tip_prv_key = GCE.asymmetric_decrypt(self.session.cc, tip_prv_key)
+            wbfile['name'] = GCE.asymmetric_decrypt(tip_prv_key, base64.b64decode(wbfile['name'].encode())).decode()
             filelocation = GCE.streaming_encryption_open('DECRYPT', tip_prv_key, filelocation)
 
         yield self.write_file_as_download(wbfile['name'], filelocation)
@@ -870,13 +874,13 @@ class RTipWBFileHandler(WBFileHandler):
                                                   models.ReceiverTip.internaltip_id == models.InternalTip.id,
                                                   models.InternalTip.tid == tid)]
 
-        return self.current_user.user_id in users_ids
+        return self.session.user_id in users_ids
 
     def delete(self, file_id):
         """
         This interface allow the recipient to set the description of a WhistleblowerFile
         """
-        return delete_wbfile(self.request.tid, self.current_user.user_id, file_id)
+        return delete_wbfile(self.request.tid, self.session.user_id, file_id)
 
 
 class ReceiverFileDownload(BaseHandler):
@@ -884,6 +888,8 @@ class ReceiverFileDownload(BaseHandler):
     This handler exposes rfiles for download.
     """
     check_roles = 'receiver'
+    require_token = [b'GET']
+    handler_exec_time_threshold = 3600
 
     @transact
     def download_rfile(self, session, tid, user_id, file_id):
@@ -905,13 +911,19 @@ class ReceiverFileDownload(BaseHandler):
 
     @inlineCallbacks
     def get(self, rfile_id):
-        rfile, tip_prv_key = yield self.download_rfile(self.request.tid, self.current_user.user_id, rfile_id)
+        rfile, tip_prv_key = yield self.download_rfile(self.request.tid, self.session.user_id, rfile_id)
 
         filelocation = os.path.join(Settings.attachments_path, rfile['filename'])
         directory_traversal_check(Settings.attachments_path, filelocation)
 
-        if rfile['status'] != 'encrypted' and tip_prv_key:
-            tip_prv_key = GCE.asymmetric_decrypt(self.current_user.cc, tip_prv_key)
+        if tip_prv_key:
+            tip_prv_key = GCE.asymmetric_decrypt(self.session.cc, tip_prv_key)
+            rfile['name'] = GCE.asymmetric_decrypt(tip_prv_key, base64.b64decode(rfile['name'].encode())).decode()
+
+        if rfile['status'] == 'encrypted':
+            rfile['name'] += ".pgp"
+
+        if tip_prv_key and rfile['status'] != 'encrypted':
             filelocation = GCE.streaming_encryption_open('DECRYPT', tip_prv_key, filelocation)
 
         yield self.write_file_as_download(rfile['name'], filelocation)
@@ -928,6 +940,6 @@ class IdentityAccessRequestsCollection(BaseHandler):
         request = self.validate_message(self.request.content.read(), requests.ReceiverIdentityAccessRequestDesc)
 
         return create_identityaccessrequest(self.request.tid,
-                                            self.current_user.user_id,
+                                            self.session.user_id,
                                             tip_id,
                                             request)

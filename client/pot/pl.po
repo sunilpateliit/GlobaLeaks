@@ -4,7 +4,7 @@
 # Metafrasi <biuro@setara.eu>, 2016,2020
 # Damian S., 2015
 # Damian S., 2015
-# Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2014-2018,2020
+# Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2014-2018,2020-2021
 # Jakub Jakubiak <jakub.jakubiak@gmail.com>, 2014
 # Jakub Jakubiak <jakub.jakubiak@gmail.com>, 2014
 # Magdalenaem <magdalena.morawiecka1@gmail.com>, 2015
@@ -21,8 +21,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: Michal Glowacki\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Polish (http://www.transifex.com/otf/globaleaks/language/pl/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -266,12 +266,6 @@ msgstr "Dozorca tożsamości"
 msgid "Identity"
 msgstr "Tożsamość"
 
-msgid "Available"
-msgstr "Dostępny"
-
-msgid "Not available"
-msgstr "Niedostępne"
-
 msgid "Access requested"
 msgstr "Zażądano dostępu"
 
@@ -362,9 +356,6 @@ msgstr "Mocne"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Tekst pokazany na górze interfejsu do wybierania kontekstów"
-
-msgid "Type to search…"
-msgstr "Wpisz, aby wyszukać..."
 
 msgid "Silence email notifications"
 msgstr "Wyłącz powiadomienia emailowe"
@@ -536,7 +527,7 @@ msgid "Tax code"
 msgstr "Kod podatkowy"
 
 msgid "File a report"
-msgstr ""
+msgstr " \nZłożyć zgłoszenie"
 
 msgid "Before proceeding, please set a new password."
 msgstr "Przed przejściem dalej proszę ustawić nowe hasło."
@@ -752,6 +743,9 @@ msgstr "Logo"
 msgid "Project name"
 msgstr "Nazwa inicjatywy"
 
+msgid "Description"
+msgstr "Opis"
+
 msgid "Homepage title"
 msgstr "Tytuł strony głównej"
 
@@ -811,9 +805,6 @@ msgstr "Wyłączone"
 
 msgid "Enabled"
 msgstr "Włączone"
-
-msgid "Description"
-msgstr "Opis"
 
 msgid "Questionnaire"
 msgstr "Ankieta"
@@ -910,15 +901,6 @@ msgstr "Nieprawidłowy format"
 
 msgid "Input should be similar to:"
 msgstr "Wpis powinien być podobny do:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Korzystanie z Let's Encrypt oznacza zgodę na ich regulamin"
-
-msgid "Read the Terms of Service"
-msgstr "Przeczytaj regulamin"
-
-msgid "I agree to the Terms of Service."
-msgstr "Zgadzam się z regulaminem."
 
 msgid "Country code"
 msgstr "Kod kraju"
@@ -1066,9 +1048,6 @@ msgstr "Warunki świadczenia usług"
 msgid "Date range"
 msgstr "Zakres dat"
 
-msgid "Map"
-msgstr "Mapa"
-
 msgid "Group of questions"
 msgstr "Grupa pytań"
 
@@ -1176,12 +1155,6 @@ msgstr "Strony"
 
 msgid "Mode:"
 msgstr "Tryb:"
-
-msgid "Active"
-msgstr "Aktywni"
-
-msgid "Inactive"
-msgstr "Nieaktywne"
 
 msgid "Configure"
 msgstr "Konfiguruj"
@@ -1532,9 +1505,6 @@ msgstr "Rozmiar Pliku"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Sygnaliści mogą dodawać załączniki"
 
-msgid "Never"
-msgstr "Nigdy"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Sygnalista może wysyłać wiadomości"
 
@@ -1636,9 +1606,6 @@ msgstr "Dozorca zażądał dostępu do tożsamości sygnalisty."
 
 msgid "Date of the request"
 msgstr "Data żądania"
-
-msgid "Undeclared"
-msgstr "Nie podano"
 
 msgid "Congratulations!"
 msgstr "Gratulacje!"

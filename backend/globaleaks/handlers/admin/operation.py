@@ -52,7 +52,7 @@ def check_hostname(session, tid, hostname):
 
 
 @transact
-def reset_submissions(session, tid):
+def reset_submissions(session, tid, user_id):
     """
     Transaction to reset the submissions of the specified tenant
 
@@ -61,7 +61,9 @@ def reset_submissions(session, tid):
     """
     session.query(Config).filter(Config.tid == tid, Config.var_name == 'counter_submissions').update({'value': 0})
 
-    db_del(session, InternalTip, InternalTip.tid ==tid)
+    db_del(session, InternalTip, InternalTip.tid==tid)
+
+    State.log(tid=tid, type='reset_reports', user_id=user_id)
 
 
 @transact
@@ -119,7 +121,12 @@ def generate_password_reset_token(session, tid, user_session, user_id):
 
     if user_session.ek and user.crypto_pub_key:
         crypto_escrow_prv_key = GCE.asymmetric_decrypt(user_session.cc, Base64Encoder.decode(user_session.ek))
-        user_cc = GCE.asymmetric_decrypt(crypto_escrow_prv_key, Base64Encoder.decode(user.crypto_escrow_bkp1_key))
+
+        if user_session.user_tid == 1:
+            user_cc = GCE.asymmetric_decrypt(crypto_escrow_prv_key, Base64Encoder.decode(user.crypto_escrow_bkp1_key))
+        else:
+            user_cc = GCE.asymmetric_decrypt(crypto_escrow_prv_key, Base64Encoder.decode(user.crypto_escrow_bkp2_key))
+
         enc_key = GCE.derive_key(user.reset_password_token.encode(), user.salt)
         key = Base64Encoder.encode(GCE.symmetric_encrypt(enc_key, user_cc))
         State.TempKeys[user_id] = TempKey(key)
@@ -140,7 +147,7 @@ class AdminOperationHandler(OperationHandler):
 
     def reset_user_password(self, req_args, *args, **kwargs):
         return generate_password_reset_token(self.request.tid,
-                                             self.request.current_user,
+                                             self.session,
                                              req_args['value'])
 
     @inlineCallbacks
@@ -156,7 +163,7 @@ class AdminOperationHandler(OperationHandler):
         })
 
     def reset_submissions(self, req_args, *args, **kwargs):
-        return reset_submissions(self.request.tid)
+        return reset_submissions(self.request.tid, self.session.user_id)
 
     @inlineCallbacks
     def set_hostname(self, req_args, *args, **kwargs):
@@ -171,7 +178,7 @@ class AdminOperationHandler(OperationHandler):
         language = self.state.tenant_cache[tid].default_language
 
         user = yield get_user(tid,
-                              self.current_user.user_id,
+                              self.session.user_id,
                               language)
 
         data = {
@@ -186,7 +193,7 @@ class AdminOperationHandler(OperationHandler):
         yield self.state.sendmail(tid, user['mail_address'], subject, body)
 
     def toggle_escrow(self, req_args, *args, **kwargs):
-        return toggle_escrow(self.request.tid, self.current_user, req_args['value'])
+        return toggle_escrow(self.request.tid, self.session, req_args['value'])
 
     def reset_templates(self, req_args):
         return reset_templates(self.request.tid)

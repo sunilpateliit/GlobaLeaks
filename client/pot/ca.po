@@ -10,7 +10,7 @@
 # b33a4006134bb6ee62b30fc0fac5cec6, 2016
 # b33a4006134bb6ee62b30fc0fac5cec6, 2016
 # Joan Bitlloch <joanbit@gmail.com>, 2017-2020
-# jmontane, 2020
+# Joan Montané, 2020
 # Josep Anton Rius <j.rius.cat@gmail.com>, 2016
 # Maddish Falzoni <maddish@xnet-x.net>, 2016
 # Nick Skelsey, 2016
@@ -19,7 +19,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/otf/globaleaks/language/ca/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -264,12 +264,6 @@ msgstr "Guardià de les identitats"
 msgid "Identity"
 msgstr "Identitat"
 
-msgid "Available"
-msgstr "Disponible"
-
-msgid "Not available"
-msgstr "No disponible"
-
 msgid "Access requested"
 msgstr "Accés demanat"
 
@@ -360,9 +354,6 @@ msgstr "Alt"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "El text es mostra a sobre de la interfície per seleccionar els contextos"
-
-msgid "Type to search…"
-msgstr "Text a cercar..."
 
 msgid "Silence email notifications"
 msgstr "Desactiva les notificacions per correu electrònic"
@@ -750,6 +741,9 @@ msgstr "Logotip"
 msgid "Project name"
 msgstr "Nom de la iniciativa"
 
+msgid "Description"
+msgstr "Descripció"
+
 msgid "Homepage title"
 msgstr "Títol de la pàgina d'inici"
 
@@ -809,9 +803,6 @@ msgstr "Deshabilitat"
 
 msgid "Enabled"
 msgstr "Habilitat"
-
-msgid "Description"
-msgstr "Descripció"
 
 msgid "Questionnaire"
 msgstr "Qüestionari"
@@ -908,15 +899,6 @@ msgstr "Format d'entrada no vàlid"
 
 msgid "Input should be similar to:"
 msgstr "L'entrada hauria de ser similar a:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "L'ús de \"Let's Encrypt\" requereix 'acceptació de les seves Condicions d'ús."
-
-msgid "Read the Terms of Service"
-msgstr "Llegir les condicions d'ús"
-
-msgid "I agree to the Terms of Service."
-msgstr "Estic d'acord amb les condicions d'ús"
 
 msgid "Country code"
 msgstr "Codi de país"
@@ -1064,9 +1046,6 @@ msgstr "Condicions del servei"
 msgid "Date range"
 msgstr "Interval de dates"
 
-msgid "Map"
-msgstr "Mapa"
-
 msgid "Group of questions"
 msgstr "Conjunt de preguntes"
 
@@ -1174,12 +1153,6 @@ msgstr "Llocs web"
 
 msgid "Mode:"
 msgstr "Mode:"
-
-msgid "Active"
-msgstr "Activa"
-
-msgid "Inactive"
-msgstr "Inactiu"
 
 msgid "Configure"
 msgstr "Configura"
@@ -1530,9 +1503,6 @@ msgstr "Mida del fitxer"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Permet als informadors afegir arxius adjunts a l'informe"
 
-msgid "Never"
-msgstr "mai"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Permet als informadors enviar missatges"
 
@@ -1634,9 +1604,6 @@ msgstr "El guardià ha demanat l'accés a la identitat de l'informador."
 
 msgid "Date of the request"
 msgstr "Data de la petició"
-
-msgid "Undeclared"
-msgstr "No declarat"
 
 msgid "Congratulations!"
 msgstr "Enhorabona!"

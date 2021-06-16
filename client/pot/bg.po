@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/otf/globaleaks/language/bg/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -258,12 +258,6 @@ msgstr "Пазител на самоличности"
 msgid "Identity"
 msgstr "Самоличност"
 
-msgid "Available"
-msgstr "На линия"
-
-msgid "Not available"
-msgstr "Не е на линия"
-
 msgid "Access requested"
 msgstr "Изискване на достъп"
 
@@ -354,9 +348,6 @@ msgstr "Силна"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Текст, който бива показан горе на страницата за избиране на контекст"
-
-msgid "Type to search…"
-msgstr "Пишете за да търсите..."
 
 msgid "Silence email notifications"
 msgstr "Заглушаване на имейл известия"
@@ -744,6 +735,9 @@ msgstr "Лого"
 msgid "Project name"
 msgstr "Име на проект"
 
+msgid "Description"
+msgstr "Описание"
+
 msgid "Homepage title"
 msgstr "Заглавие на началната страница"
 
@@ -803,9 +797,6 @@ msgstr "Деактивирано"
 
 msgid "Enabled"
 msgstr "Активиран"
-
-msgid "Description"
-msgstr "Описание"
 
 msgid "Questionnaire"
 msgstr "Въпросник"
@@ -902,15 +893,6 @@ msgstr "Невалиден формат на данните."
 
 msgid "Input should be similar to:"
 msgstr "Информацията трябва да бъде подобна на:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Използването на Let's Encrypt изисква приемането на техните Общи Условия."
-
-msgid "Read the Terms of Service"
-msgstr "Прочетете Общите Условия."
-
-msgid "I agree to the Terms of Service."
-msgstr "Съгласен съм с Общите Условия."
 
 msgid "Country code"
 msgstr "Код на държавата"
@@ -1058,9 +1040,6 @@ msgstr "Условия за ползване"
 msgid "Date range"
 msgstr "Времеви обхват"
 
-msgid "Map"
-msgstr "Карта"
-
 msgid "Group of questions"
 msgstr "Група въпроси"
 
@@ -1168,12 +1147,6 @@ msgstr "Страници"
 
 msgid "Mode:"
 msgstr "Режим:"
-
-msgid "Active"
-msgstr "Активен"
-
-msgid "Inactive"
-msgstr "Неактивен"
 
 msgid "Configure"
 msgstr "Конфигурирай"
@@ -1524,9 +1497,6 @@ msgstr "Размер на файла"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Разрешаване на подателя на сигнал да прикачва файлове към сигнала"
 
-msgid "Never"
-msgstr "Никога"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Разрешаване на подателя на сигнал да изпраща съобщения"
 
@@ -1628,9 +1598,6 @@ msgstr "Молба за достъп до самоличността на изт
 
 msgid "Date of the request"
 msgstr "Дата на заявката"
-
-msgid "Undeclared"
-msgstr "Недеклариран"
 
 msgid "Congratulations!"
 msgstr "Поздравления!"

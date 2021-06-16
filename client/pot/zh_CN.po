@@ -4,6 +4,7 @@
 # Chi-Hsun Tsai, 2017
 # ff98sha, 2020
 # Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2015,2017-2018,2020
+# khi, 2021
 # 91ca17e215222af3ff24b8eeb76640c7_f9deb57, 2013-2014
 # lin, 2014
 # 刘位, 2014
@@ -21,7 +22,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/otf/globaleaks/language/zh_CN/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -266,12 +267,6 @@ msgstr "保管人的身份识别"
 msgid "Identity"
 msgstr "身份"
 
-msgid "Available"
-msgstr "可用"
-
-msgid "Not available"
-msgstr "不可用"
-
 msgid "Access requested"
 msgstr "已请求访问"
 
@@ -362,9 +357,6 @@ msgstr "强"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "接口上方会显示所选择内文文本"
-
-msgid "Type to search…"
-msgstr "输入欲搜索"
 
 msgid "Silence email notifications"
 msgstr "对电子邮件通知消音"
@@ -533,10 +525,10 @@ msgid "VAT number"
 msgstr "VAT数字"
 
 msgid "Tax code"
-msgstr ""
+msgstr "税码"
 
 msgid "File a report"
-msgstr ""
+msgstr "提交报告"
 
 msgid "Before proceeding, please set a new password."
 msgstr "继续之前，请设一个新密码。"
@@ -752,6 +744,9 @@ msgstr "Logo"
 msgid "Project name"
 msgstr "专案名称"
 
+msgid "Description"
+msgstr "描述"
+
 msgid "Homepage title"
 msgstr "首页标题"
 
@@ -811,9 +806,6 @@ msgstr "关闭"
 
 msgid "Enabled"
 msgstr "启用"
-
-msgid "Description"
-msgstr "描述"
 
 msgid "Questionnaire"
 msgstr "问卷"
@@ -910,15 +902,6 @@ msgstr "无效的输入格式"
 
 msgid "Input should be similar to:"
 msgstr "轮入应相这样："
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "使用Let's Encrypt需要先同意他们的服务条款"
-
-msgid "Read the Terms of Service"
-msgstr "阅课"
-
-msgid "I agree to the Terms of Service."
-msgstr "我同意这份服务个款"
 
 msgid "Country code"
 msgstr "国码"
@@ -1066,9 +1049,6 @@ msgstr "服务条款"
 msgid "Date range"
 msgstr "日期范围"
 
-msgid "Map"
-msgstr "地图"
-
 msgid "Group of questions"
 msgstr "一组问题"
 
@@ -1176,12 +1156,6 @@ msgstr "网站"
 
 msgid "Mode:"
 msgstr "模式："
-
-msgid "Active"
-msgstr "活跃中的"
-
-msgid "Inactive"
-msgstr "静止状态的"
 
 msgid "Configure"
 msgstr "设置"
@@ -1532,9 +1506,6 @@ msgstr "文件大小"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "揭密者可对此报告附加数据文件"
 
-msgid "Never"
-msgstr "绝不要"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "允许告密人发送消息"
 
@@ -1636,9 +1607,6 @@ msgstr "保管人要求取得告密人身份识别"
 
 msgid "Date of the request"
 msgstr "提出要求的日期"
-
-msgid "Undeclared"
-msgstr "未作宣告的"
 
 msgid "Congratulations!"
 msgstr "祝贺你！"

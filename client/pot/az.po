@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Azerbaijani (http://www.transifex.com/otf/globaleaks/language/az/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -254,12 +254,6 @@ msgstr "Kimliklərin mühafizəçisi"
 msgid "Identity"
 msgstr "Kimlik"
 
-msgid "Available"
-msgstr "Mövcuddur"
-
-msgid "Not available"
-msgstr "Mövcud deyil"
-
 msgid "Access requested"
 msgstr "Daxil olma tələbi"
 
@@ -350,9 +344,6 @@ msgstr "Güclü"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Kontekstləri seçmək üçün ekranın üstündə göstərilən mətn"
-
-msgid "Type to search…"
-msgstr "Axtarış üçün yazın...."
 
 msgid "Silence email notifications"
 msgstr "E-poçt bildirişlərini susdurun"
@@ -740,6 +731,9 @@ msgstr "Loqo"
 msgid "Project name"
 msgstr "Proyekt adı"
 
+msgid "Description"
+msgstr "Açıqlama"
+
 msgid "Homepage title"
 msgstr "Ana səhifənin adı"
 
@@ -799,9 +793,6 @@ msgstr "Sönlüdür"
 
 msgid "Enabled"
 msgstr "Aktivdir"
-
-msgid "Description"
-msgstr "Açıqlama"
 
 msgid "Questionnaire"
 msgstr "Sorğu"
@@ -898,15 +889,6 @@ msgstr "Yanlış giriş formatı."
 
 msgid "Input should be similar to:"
 msgstr "Giriş aşağıdakına bənzər olmalıdır:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Şifrələnmədən istifadə etmək Xidmət Şərtləri ilə razılaşdırılmanı tələb edir."
-
-msgid "Read the Terms of Service"
-msgstr "Xidmət şərtlərini oxuyun"
-
-msgid "I agree to the Terms of Service."
-msgstr "Xidmət şərtləri ilə razıyam."
 
 msgid "Country code"
 msgstr "Ölkə kodu:"
@@ -1054,9 +1036,6 @@ msgstr "Xidmət şərtləri"
 msgid "Date range"
 msgstr ""
 
-msgid "Map"
-msgstr ""
-
 msgid "Group of questions"
 msgstr "Suallar qrupu"
 
@@ -1164,12 +1143,6 @@ msgstr "Saytlar"
 
 msgid "Mode:"
 msgstr ""
-
-msgid "Active"
-msgstr "Aktiv"
-
-msgid "Inactive"
-msgstr "Fəaliyyətsiz"
 
 msgid "Configure"
 msgstr "Quraşdır"
@@ -1520,9 +1493,6 @@ msgstr "Faylın ölçüsü"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "İnformasiya ötürənə təsdiqetməyə əlavələr etməsinə icazə verin"
 
-msgid "Never"
-msgstr "Heç vaxt"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "İnformasiya ötürənin mesaj göndərməsinə icazə verin"
 
@@ -1624,9 +1594,6 @@ msgstr "Mühafizəçidən informasiya ötürənin kimliyinə giriş tələb olun
 
 msgid "Date of the request"
 msgstr "Tələb olunan tarix"
-
-msgid "Undeclared"
-msgstr ""
 
 msgid "Congratulations!"
 msgstr "Təbriklər!"

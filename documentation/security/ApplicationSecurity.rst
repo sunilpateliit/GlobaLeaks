@@ -45,22 +45,28 @@ Password Complexity
 The system enforces the usage of complex password by implementing a custom algorithm necessary for ensuring a reasonable entropy of each authentication secret.
 
 Password are scored in three levels: strong, acceptable, insecure.
-A strong password should be formed by capital letters, lowercase letters, numbers and a symbols, be at least 12 characters long and include a variety of at least 10 different inputs.
-An acceptable password should be formed by at least 3 different inputs over capital letters, lowercase letters, numbers and a symbols, be at least 10 characters and include a variety of at least 7 different inputs.
+
+* A strong password should be formed by capital letters, lowercase letters, numbers and a symbols, be at least 12 characters long and include a variety of at least 10 different inputs.
+* An acceptable password should be formed by at least 3 different inputs over capital letters, lowercase letters, numbers and a symbols, be at least 10 characters and include a variety of at least 7 different inputs.
+
+We encourage each end user to use `KeePassXC <https://keepassxc.org>`_ to generate and retain strong and unique passphrases.
 
 Two Factor Authentication (2FA)
 -------------------------------
-Users are enabled to enroll for Two Factor Authentication via their own preferences.
-The system implements Two Factor Authentication (2FA) based on TOTP as for `RFC 6238 <https://tools.ietf.org/rfc/rfc6238.txt>`_.
+The system implements Two Factor Authentication (2FA) based on TOTP based on `RFC 6238 <https://tools.ietf.org/rfc/rfc6238.txt>`_ alghorithm and 160 bits secrets.
 
-Password Change on First Login
+Users are enabled to enroll for Two Factor Authentication via their own preferences and administrators can optionally enforce this requirement.
+
+We recommend using FreeOTP available `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`_ and `for iOS <https://apps.apple.com/us/app/freeotp-authenticator/id872559395>`_.
 ------------------------------
 The system enforces users to change their own password at their first login.
+
 Administrators could as well enforce password change for users at their next login.
 
 Periodic Password Change
 ------------------------
 By default the system enforces users to change their own password at least every year.
+
 This period is configurable by administrators.
 
 Proof of Work on Login and Submissions
@@ -70,6 +76,7 @@ The system implements an automatic ``proof of work`` on every login that require
 Slowdown on Failed Login Attempts
 ---------------------------------
 The system identifies multiple failed login attempts and implement a slowdown procedure where an authenticating client should wait up to 42 seconds to complete an authentication.
+
 This feature is intended to slow down possible attacks requiring more resources to users in terms of time, computation and memory.
 
 Password Recovery
@@ -124,27 +131,24 @@ X-Frame-Options
 +++++++++++++++
 The backend configure the X-Frame-Options header to prevent inclusion by means of Iframes in any site:
 ::
-  X-Frame-Options', b'deny'
+  X-Frame-Options: deny
 
 Referrer-Policy
 +++++++++++++++
 Web-browsers usually attach referrers in their http headers as they browse links. The platform enforce a referrer policy to avoid this behaviour.
 ::
-
   Referrer-Policy: no-referrer
 
 X-Content-Type-Options
 ++++++++++++++++++++++
 When setting up Content-Type for the specific output, we avoid the automatic mime detection logic of the browser by setting up the following header:
 ::
-
   X-Content-Type-Options: nosniff
 
 X-XSS-Protection
 ++++++++++++++++
 In addition in order to explicitly instruct browsers to enable XSS protections the Backend inject the following header:
 ::
-
   X-XSS-Protection: 1; mode=block
 
 Cache-Control

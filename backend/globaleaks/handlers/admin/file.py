@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
 import os
+import re
 
-from sqlalchemy.sql.expression import not_
+from sqlalchemy.sql.expression import not_, or_
 from twisted.internet.defer import inlineCallbacks, returnValue
 
 from globaleaks import models
 from globaleaks.handlers.base import BaseHandler
 from globaleaks.handlers.user import can_edit_general_settings_or_raise
 from globaleaks.orm import db_get, db_del, transact, tw
-from globaleaks.rest import errors
+from globaleaks.rest import errors, requests
+from globaleaks.state import State
 from globaleaks.utils.fs import directory_traversal_check
 from globaleaks.utils.utility import uuid4
 
@@ -27,7 +29,10 @@ def get_files(session, tid):
     """
     ret = []
 
-    for sf in session.query(models.File).filter(models.File.tid == tid, not_(models.File.name.in_(special_files))):
+    for sf in session.query(models.File).filter(models.File.tid == tid):
+        if sf.name in special_files or re.match(requests.uuid_regexp, sf.name):
+            continue
+
         ret.append({
             'id': sf.id,
             'name': sf.name
@@ -53,17 +58,11 @@ def db_add_file(session, tid, file_id, name, path):
     session.merge(file_obj)
 
 
-def db_get_file(session, tid, file_id):
-    """
-    Transaction thecontent of the file identified by the specified id
-
-    :param session: An ORM session
-    :param tid: A tenant ID
-    :param file_id: A file ID
-    :return: The content of the file
-    """
-    file_obj = session.query(models.File).filter(models.File.tid == tid, models.File.id == file_id).one_or_none()
-    return file_obj.data if file_obj else ''
+def db_get_file_by_id_or_name(session, tid, id_or_name):
+    return session.query(models.File) \
+                  .filter(models.File.tid == tid,
+                          or_(models.File.id == id_or_name,
+                              models.File.name == id_or_name)).one_or_none()
 
 
 @transact
@@ -76,8 +75,22 @@ def get_file_id_by_name(session, tid, name):
     :param name: A file name
     :return: A result model
     """
-    file_obj = session.query(models.File).filter(models.File.tid == tid, models.File.name == name).one_or_none()
+    file_obj = db_get_file_by_id_or_name(session, tid, name)
     return file_obj.id if file_obj else ''
+
+
+@transact
+def delete_file(session, tid, id_or_name):
+    file_obj = db_get_file_by_id_or_name(session, tid, id_or_name)
+    if not file_obj:
+        return
+
+    path = os.path.join(State.settings.files_path, file_obj.id)
+    directory_traversal_check(State.settings.files_path, path)
+    if os.path.exists(path):
+        os.remove(path)
+
+    return session.delete(file_obj)
 
 
 class FileInstance(BaseHandler):
@@ -85,42 +98,36 @@ class FileInstance(BaseHandler):
     invalidate_cache = True
     upload_handler = True
 
-    def permission_check(self, id):
-        if self.current_user.user_role == 'admin' or id == 'logo':
+    def permission_check(self, name):
+        if self.session.user_role == 'admin' or name == 'logo':
             return can_edit_general_settings_or_raise(self)
 
         raise errors.InvalidAuthentication
 
     @inlineCallbacks
-    def post(self, id):
-        yield self.permission_check(id)
+    def post(self, name):
+        yield self.permission_check(name)
 
-        if id in special_files:
-            self.uploaded_file['name'] = id
+        if name in special_files or re.match(requests.uuid_regexp, name):
+            self.uploaded_file['name'] = name
 
         id = uuid4()
+
         path = os.path.join(self.state.settings.files_path, id)
 
         if os.path.exists(path):
             return
 
-        yield self.write_upload_plaintext_to_disk(path)
         yield tw(db_add_file, self.request.tid, id, self.uploaded_file['name'], path)
+
+        yield self.write_upload_plaintext_to_disk(path)
+
         returnValue(id)
 
     @inlineCallbacks
-    def delete(self, id):
-        yield self.permission_check(id)
-
-        path = os.path.join(self.state.settings.files_path, id)
-        directory_traversal_check(self.state.settings.files_path, path)
-        if os.path.exists(path):
-            os.remove(path)
-
-        if id in special_files:
-            id = yield get_file_id_by_name(self.request.tid, id)
-
-        yield tw(db_del, models.File, (models.File.tid == self.request.tid, models.File.id == id))
+    def delete(self, name):
+        yield self.permission_check(name)
+        yield delete_file(self.request.tid, name)
 
 
 class FileCollection(BaseHandler):

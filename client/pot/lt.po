@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Lithuanian (http://www.transifex.com/otf/globaleaks/language/lt/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -250,12 +250,6 @@ msgstr "Tapatybių prižiūrėtojas"
 msgid "Identity"
 msgstr "Tapatybė"
 
-msgid "Available"
-msgstr "Prieinama"
-
-msgid "Not available"
-msgstr "Neprieinama"
-
 msgid "Access requested"
 msgstr "Užklausta prieigos"
 
@@ -346,9 +340,6 @@ msgstr "Stiprus"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Tekstas rodomas sąsajos viršuje pasirenkant kontekstus"
-
-msgid "Type to search…"
-msgstr "Rašykite norėdami ieškoti..."
 
 msgid "Silence email notifications"
 msgstr "Nutildyti el. pašto pranešimus"
@@ -736,6 +727,9 @@ msgstr "Logotipas"
 msgid "Project name"
 msgstr "Projekto pavadinimas"
 
+msgid "Description"
+msgstr "Aprašas"
+
 msgid "Homepage title"
 msgstr "Pradžios puslapio pavadinimas"
 
@@ -795,9 +789,6 @@ msgstr "Išjungta"
 
 msgid "Enabled"
 msgstr "Įgalinta"
-
-msgid "Description"
-msgstr "Aprašas"
 
 msgid "Questionnaire"
 msgstr "Klausimynas"
@@ -894,15 +885,6 @@ msgstr "Neteisingas įvesties formatas."
 
 msgid "Input should be similar to:"
 msgstr ""
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr ""
-
-msgid "Read the Terms of Service"
-msgstr "Skaityti paslaugų sąlygas"
-
-msgid "I agree to the Terms of Service."
-msgstr "Sutinku su paslaugų sąlygomis"
 
 msgid "Country code"
 msgstr "Šalies kodas"
@@ -1050,9 +1032,6 @@ msgstr "Paslaugų sąlygos"
 msgid "Date range"
 msgstr ""
 
-msgid "Map"
-msgstr "Žemėlapis"
-
 msgid "Group of questions"
 msgstr "Klausimų grupė"
 
@@ -1160,12 +1139,6 @@ msgstr "Svetainės"
 
 msgid "Mode:"
 msgstr "Režimas"
-
-msgid "Active"
-msgstr "Aktyvi"
-
-msgid "Inactive"
-msgstr "Neaktyvus"
 
 msgid "Configure"
 msgstr "Konfigūruoti"
@@ -1516,9 +1489,6 @@ msgstr "Failo dydis"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr ""
 
-msgid "Never"
-msgstr "Niekada"
-
 msgid "Allow the whistleblower to send messages"
 msgstr ""
 
@@ -1619,9 +1589,6 @@ msgid ""
 msgstr ""
 
 msgid "Date of the request"
-msgstr ""
-
-msgid "Undeclared"
 msgstr ""
 
 msgid "Congratulations!"

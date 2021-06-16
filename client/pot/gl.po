@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Galician (http://www.transifex.com/otf/globaleaks/language/gl/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -253,12 +253,6 @@ msgstr "Custodio das identidades"
 msgid "Identity"
 msgstr "Identidade"
 
-msgid "Available"
-msgstr "Dispoñible"
-
-msgid "Not available"
-msgstr "Non dispoñible"
-
 msgid "Access requested"
 msgstr "Acceso solicitado"
 
@@ -349,9 +343,6 @@ msgstr "Forte"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Texto que se mostra na parte superior da interface para seleccionar contextos"
-
-msgid "Type to search…"
-msgstr "Escribe para buscar... "
 
 msgid "Silence email notifications"
 msgstr "Silenciar as notificacións do correo electrónico"
@@ -739,6 +730,9 @@ msgstr "Logo"
 msgid "Project name"
 msgstr "Nome do proxecto"
 
+msgid "Description"
+msgstr "Descrición"
+
 msgid "Homepage title"
 msgstr "Título da páxina de inicio"
 
@@ -798,9 +792,6 @@ msgstr "Desactivado"
 
 msgid "Enabled"
 msgstr "Activado"
-
-msgid "Description"
-msgstr "Descrición"
 
 msgid "Questionnaire"
 msgstr "Cuestionario"
@@ -897,15 +888,6 @@ msgstr "Formato de entrada non válido."
 
 msgid "Input should be similar to:"
 msgstr "A entrada debe ser similar a:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Usar o cifrado de Let's Encrypt de acordo os seus Termos de servizo."
-
-msgid "Read the Terms of Service"
-msgstr "Lea os Termos de servizo"
-
-msgid "I agree to the Terms of Service."
-msgstr "Acepto as Condicións de servizo."
 
 msgid "Country code"
 msgstr "Código do país"
@@ -1053,9 +1035,6 @@ msgstr "Condicións de servicio"
 msgid "Date range"
 msgstr ""
 
-msgid "Map"
-msgstr "Mapa"
-
 msgid "Group of questions"
 msgstr "Grupo de preguntas"
 
@@ -1163,12 +1142,6 @@ msgstr "Sitios"
 
 msgid "Mode:"
 msgstr "Modo:"
-
-msgid "Active"
-msgstr "Activo"
-
-msgid "Inactive"
-msgstr "Inactivo"
 
 msgid "Configure"
 msgstr "Configurar"
@@ -1519,9 +1492,6 @@ msgstr "Tamaño do ficheiro"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr ""
 
-msgid "Never"
-msgstr "Nunca"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Permitir que o denunciante envíe mensaxes"
 
@@ -1623,9 +1593,6 @@ msgstr "Foi requerido o acceso á identidade do denunciante para o custodio "
 
 msgid "Date of the request"
 msgstr "Data da solicitude"
-
-msgid "Undeclared"
-msgstr "Non declarado"
 
 msgid "Congratulations!"
 msgstr "Parabéns!"

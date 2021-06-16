@@ -22,8 +22,8 @@ email_regexp = r'^(([\w+-\.]){0,100}[\w]{1,100}@([\w+-\.]){0,100}[\w]{1,100})$'
 email_regexp_or_empty = r'^(([\w+-\.]){0,100}[\w]{1,100}@([\w+-\.]){0,100}[\w]{1,100})$|^$'
 hostname_regexp = r'^[0-9a-z\-\.]+$'
 hostname_regexp_or_empty = r'^[0-9a-z\-\.]+$|^$'
-subdomain_regexp = r'^[0-9a-z]+$'
-subdomain_regexp_or_empty = r'^[0-9a-z]+$|^$'
+subdomain_regexp = r'^[0-9a-z\-]+$'
+subdomain_regexp_or_empty = r'^[0-9a-z\-]+$|^$'
 https_url_regexp = r'^https://([0-9a-z\-]+)\.(.*)$'
 https_url_regexp_or_empty = r'^https://([0-9a-z\-]+)\.(.*)$|^$'
 tip_operation_regexp = r'^(postpone|set)$'
@@ -50,7 +50,6 @@ field_type_regexp = (r'^('
                      'email|'
                      'date|'
                      'daterange|'
-                     'map|'
                      'fieldgroup)$')
 
 field_attr_type_regexp = (r'^('
@@ -104,18 +103,15 @@ AuthDesc = {
     'tid': int,
     'username': str,
     'password': str,
-    'authcode': str,
-    'token': str
+    'authcode': str
 }
 
 ReceiptAuthDesc = {
-    'receipt': str,
-    'token': str
+    'receipt': str
 }
 
 TokenAuthDesc = {
-    'authtoken': str,
-    'token': str
+    'authtoken': str
 }
 
 TokenAnswerDesc = {

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Norwegian Bokmål (Norway) (http://www.transifex.com/otf/globaleaks/language/nb_NO/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -252,12 +252,6 @@ msgstr "Tillitsperson for identiteter"
 msgid "Identity"
 msgstr "Identitet"
 
-msgid "Available"
-msgstr "Tilgjengelig"
-
-msgid "Not available"
-msgstr "Opptatt"
-
 msgid "Access requested"
 msgstr "Tilgang forespurt"
 
@@ -348,9 +342,6 @@ msgstr "Sterkt"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Tekst vist på toppen av grensesnittet for valg av bindeleddsinformasjon"
-
-msgid "Type to search…"
-msgstr "Skriv for å søke…"
 
 msgid "Silence email notifications"
 msgstr "Skru av e-postmerknader"
@@ -738,6 +729,9 @@ msgstr "Logo"
 msgid "Project name"
 msgstr "Prosjektets navn"
 
+msgid "Description"
+msgstr "Beskrivelse"
+
 msgid "Homepage title"
 msgstr "Hjemmesidens tittel"
 
@@ -797,9 +791,6 @@ msgstr "Avskrudd"
 
 msgid "Enabled"
 msgstr "Påskrudd"
-
-msgid "Description"
-msgstr "Beskrivelse"
 
 msgid "Questionnaire"
 msgstr "Spørreskjema"
@@ -896,15 +887,6 @@ msgstr "Ugyldig inndata-format"
 
 msgid "Input should be similar to:"
 msgstr "Inndata bør ligne:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Bruk av Let's Encrypt krever at du samtykker til deres tjenestevilkår."
-
-msgid "Read the Terms of Service"
-msgstr "Les tjenestevilkårene"
-
-msgid "I agree to the Terms of Service."
-msgstr "Jeg samtykker til tjenestevilkårene"
 
 msgid "Country code"
 msgstr "Landskode"
@@ -1052,9 +1034,6 @@ msgstr "Tjenestevilkår"
 msgid "Date range"
 msgstr ""
 
-msgid "Map"
-msgstr ""
-
 msgid "Group of questions"
 msgstr "Spørsmålsgruppering"
 
@@ -1162,12 +1141,6 @@ msgstr "Sider"
 
 msgid "Mode:"
 msgstr ""
-
-msgid "Active"
-msgstr "Aktiv"
-
-msgid "Inactive"
-msgstr "Inaktiv"
 
 msgid "Configure"
 msgstr ""
@@ -1518,9 +1491,6 @@ msgstr "Filstørrelse"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr ""
 
-msgid "Never"
-msgstr "Aldri"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Tillat fløyteblåseren å sende meldinger"
 
@@ -1622,9 +1592,6 @@ msgstr "Tilgang til fløyteblåsers identitet har blitt forespurt av tillitspers
 
 msgid "Date of the request"
 msgstr "Dato for forespørsel"
-
-msgid "Undeclared"
-msgstr "Uklarert"
 
 msgid "Congratulations!"
 msgstr "Gratulerer!"

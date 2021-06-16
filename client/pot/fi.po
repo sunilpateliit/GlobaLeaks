@@ -7,14 +7,14 @@
 # John Wild <ac@elephantleague.org>, 2015
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2015,2017,2020
 # Juha Nurmi <juha.nurmi@ahmia.fi>, 2015
-# Max Moiseev <max.moiseev@chamber.fi>, 2020
+# Max Moiseev <max.moiseev@chamber.fi>, 2020-2021
 # Panu Ahvenharju, 2018-2020
 # Sami Kuusisto <sami@6sto.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: Eva Simonsson\n"
+"PO-Revision-Date: 2021-05-18 10:50+0000\n"
+"Last-Translator: Max Moiseev <max.moiseev@chamber.fi>\n"
 "Language-Team: Finnish (http://www.transifex.com/otf/globaleaks/language/fi/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,7 +23,7 @@ msgstr ""
 "mime-version: 1.0\n"
 
 msgid "Log in"
-msgstr "Kirjaudu"
+msgstr "Kirjaudu sisään"
 
 msgid "Main configuration"
 msgstr "Palvelun etusivu"
@@ -119,7 +119,7 @@ msgid "YOUR NAME"
 msgstr "NIMESI"
 
 msgid "Label the report"
-msgstr "Anna vihjeelle nimi"
+msgstr "Anna ilmoitukselle nimi"
 
 msgid "Postpone the expiration date"
 msgstr "Siirrä vanhentumispäivää myöhäisemmäksi"
@@ -258,12 +258,6 @@ msgstr "Käyttäjätietojen valvoja"
 msgid "Identity"
 msgstr "Identiteetti"
 
-msgid "Available"
-msgstr "Tavoitettavissa"
-
-msgid "Not available"
-msgstr "Ei tavoitettavissa"
-
 msgid "Access requested"
 msgstr "Käyttöoikeus pyydetty"
 
@@ -354,9 +348,6 @@ msgstr "Vahva"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Sivun yläosan teksti aihetta valittaessa"
-
-msgid "Type to search…"
-msgstr "Etsi..."
 
 msgid "Silence email notifications"
 msgstr "Hiljennä sähköposti-ilmoitukset"
@@ -744,6 +735,9 @@ msgstr "Logo"
 msgid "Project name"
 msgstr "Palvelun nimi"
 
+msgid "Description"
+msgstr "Kuvaus"
+
 msgid "Homepage title"
 msgstr "Otsikkoteksti"
 
@@ -803,9 +797,6 @@ msgstr "Otettu pois käytöstä"
 
 msgid "Enabled"
 msgstr "Käytössä"
-
-msgid "Description"
-msgstr "Kuvaus"
 
 msgid "Questionnaire"
 msgstr "Vihjelomake"
@@ -902,15 +893,6 @@ msgstr "Syötteen muoto ei kelpaa."
 
 msgid "Input should be similar to:"
 msgstr "Tekstikentän sallittu muoto: "
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Let's Encrypt -palvelua käytettäessä täytyy hyväksyä heidän käyttöehdot."
-
-msgid "Read the Terms of Service"
-msgstr "Lue käyttöehdot"
-
-msgid "I agree to the Terms of Service."
-msgstr "Hyväksyn käyttöehdot"
 
 msgid "Country code"
 msgstr "Maakoodi"
@@ -1058,9 +1040,6 @@ msgstr "Käyttöehdot"
 msgid "Date range"
 msgstr "Päivämäärärajaus"
 
-msgid "Map"
-msgstr "Kartta"
-
 msgid "Group of questions"
 msgstr "Kysymysryhmä"
 
@@ -1168,12 +1147,6 @@ msgstr "Palvelut"
 
 msgid "Mode:"
 msgstr "Tila:"
-
-msgid "Active"
-msgstr "Aktiivinen"
-
-msgid "Inactive"
-msgstr "Ei toiminnassa"
 
 msgid "Configure"
 msgstr "Aseta"
@@ -1524,9 +1497,6 @@ msgstr "Tiedostokoko"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Salli vihjeenantajan liittää vihjeeseen tiedostoja."
 
-msgid "Never"
-msgstr "Ei koskaan"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Salli vihjeen antajan lähettää viestejä"
 
@@ -1628,9 +1598,6 @@ msgstr "Valvojalle on lähetetty pyyntö päästä vihjeen antajan henkilötieto
 
 msgid "Date of the request"
 msgstr "Pyynnön päivämäärä"
-
-msgid "Undeclared"
-msgstr "Ei ilmoitettu"
 
 msgid "Congratulations!"
 msgstr "Onneksi olkoon!"

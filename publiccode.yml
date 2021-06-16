@@ -1,10 +1,10 @@
 name: GlobaLeaks
-releaseDate: '2021-04-02'
+releaseDate: '2021-05-23'
 publiccodeYmlVersion: '0.2'
 url: 'https://github.com/globaleaks/GlobaLeaks'
 landingURL: 'https://www.globaleaks.org/'
 logo: brand/assets/globaleaks-icon-color.svg
-softwareVersion: 4.2.0
+softwareVersion: 4.2.10
 softwareType: standalone/web
 developmentStatus: stable
 platforms:
@@ -28,7 +28,7 @@ maintenance:
 legal:
   license: AGPL-3.0
   mainCopyrightOwner: >-
-    Hermes Center for Transparency and Digital Humand Rights
+    Hermes Center for Transparency and Digital Human Rights
   authorsFile: 'https://github.com/globaleaks/GlobaLeaks/blob/main/AUTHORS'
   repoOwner: GlobaLeaks
 localisation:
@@ -38,6 +38,8 @@ localisation:
     - ar
     - az
     - bg
+    - bn
+    - bo
     - bs
     - ca
     - cs
@@ -58,11 +60,15 @@ localisation:
     - id
     - it
     - ja
+    - lo
     - lt
     - ka
+    - km
     - ko
     - mg
     - mk
+    - ms
+    - my
     - nb_NO
     - nl
     - pl
@@ -78,10 +84,12 @@ localisation:
     - ta
     - th
     - tr
+    - ug
     - uk
     - ur
     - vi
     - zh_CN
+    - zh_HK
     - zh_TW
 it:
   conforme:
@@ -92,7 +100,7 @@ it:
 description:
   en:
     genericName: whistleblowing software
-    shortDescription: 'Open-Source Whistleblowing Software '
+    shortDescription: 'Open-Source Whistleblowing Software'
     documentation: 'https://docs.globaleaks.org/'
     longDescription: >-
       [GlobaLeaks](https://www.globaleaks.org/) is free, open souce software

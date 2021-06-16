@@ -22,12 +22,12 @@
 # signal89, 2014
 # signal89, 2014
 # b0b47d46632b78a09a40de799fda9a65, 2019
-# Vox, 2020
+# Vox <voxp@protonmail.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: Reza Ghasemi\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Persian (http://www.transifex.com/otf/globaleaks/language/fa/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -271,12 +271,6 @@ msgstr "نگهبانی از هویت"
 msgid "Identity"
 msgstr "هویت"
 
-msgid "Available"
-msgstr "در دسترس"
-
-msgid "Not available"
-msgstr "غیرقابل دسترس"
-
 msgid "Access requested"
 msgstr "درخواست دسترسی"
 
@@ -367,9 +361,6 @@ msgstr "قوی"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "متن در مقابل محتوی انتخاب شده نمایش داده شود"
-
-msgid "Type to search…"
-msgstr "برای جستجو تای‍پ کنید..."
 
 msgid "Silence email notifications"
 msgstr "نوتیفیکیشن های ایمیل بدون صدا"
@@ -757,6 +748,9 @@ msgstr "آرم"
 msgid "Project name"
 msgstr "نام پروژه"
 
+msgid "Description"
+msgstr "توضیح"
+
 msgid "Homepage title"
 msgstr "اسم صفحه اصلی"
 
@@ -816,9 +810,6 @@ msgstr "غیر فعال شد"
 
 msgid "Enabled"
 msgstr "فعال شده"
-
-msgid "Description"
-msgstr "توضیح"
 
 msgid "Questionnaire"
 msgstr "پرسش‌نامه"
@@ -915,15 +906,6 @@ msgstr "فرمت ورودی نامعتبر است"
 
 msgid "Input should be similar to:"
 msgstr "ورودی باید مشابه به این ها باشد:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "استفاده از  Let's Encrypt ملزم به تایید کردن شرایط استفاده از خدمات آن ها می باشد."
-
-msgid "Read the Terms of Service"
-msgstr "خواندن شرایط استفاده از خدمات"
-
-msgid "I agree to the Terms of Service."
-msgstr "با شرایط استفاده از خدمات موافقم"
 
 msgid "Country code"
 msgstr "کد کشور"
@@ -1071,9 +1053,6 @@ msgstr " شرایط خدمات"
 msgid "Date range"
 msgstr "محدوده تاریخ"
 
-msgid "Map"
-msgstr "نقشه"
-
 msgid "Group of questions"
 msgstr "گروه سوال ها"
 
@@ -1181,12 +1160,6 @@ msgstr "سایت ها "
 
 msgid "Mode:"
 msgstr "حالت:"
-
-msgid "Active"
-msgstr "فعال"
-
-msgid "Inactive"
-msgstr "غیرفعال"
 
 msgid "Configure"
 msgstr "پیکربندی"
@@ -1537,9 +1510,6 @@ msgstr "اندازه فایل"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "به افشاگر اجازه اضافه کردن ضمیمه به این گزارش داده شود"
 
-msgid "Never"
-msgstr "هرگز"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "به افشاگر اجازه ارسال پیام داده شود"
 
@@ -1641,9 +1611,6 @@ msgstr "دسترسی به هویت افشاگر از ‍داده بان درخو
 
 msgid "Date of the request"
 msgstr "تاریخ درخواست"
-
-msgid "Undeclared"
-msgstr "اعلام نشده"
 
 msgid "Congratulations!"
 msgstr "تبریک!"

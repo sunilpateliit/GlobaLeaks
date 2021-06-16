@@ -5,7 +5,11 @@
     <title>GlobaLeaks</title>
     <meta name="description" content="Secure whistleblowing platform based on GlobaLeaks free and open-source software.">
     <meta name="viewport" content="width=device-width, user-scalable=yes" />
-    <link rel="shortcut icon" href="/s/favicon">
+    <link rel="shortcut icon" data-ng-href="{{public.node.favicon ? 's/favicon' : 'data/favicon.ico'}}">
+
+    <style>
+      .ng-cloak, #BrowserNotSupported { display:none }
+    </style>
 
     <!-- build:css css/styles.css -->
     <link rel="stylesheet" href="lib/css/fontawesome.css" />
@@ -23,9 +27,9 @@
   </head>
 
   <body class="container-fluid d-flex flex-column" data-ng-class="{{Utils.getCSSFlags()}}" data-flow-prevent-drop>
-    <a class="skip-link d-none" href="#ContentBox"></a>
+    <a class="skip-link d-none ng-cloak" href="#ContentBox"></a>
 
-    <div id="PageOverlay" data-ng-hide="!showLoadingPanel">
+    <div id="PageOverlay" class="ng-cloak" data-ng-hide="!showLoadingPanel">
       <div id="Loader"></div>
     </div>
 
@@ -43,6 +47,26 @@
     </div>
 
     <footer id="FooterBox" class="ng-cloak" data-ng-if="started" data-ng-include="'views/partials/footer.html'" data-ng-cloak></footer>
+
+    <div id="BrowserNotSupported">
+      <h1>Error!</h1><br /><br />
+      <div>
+        You are running an unsupported and potentially vulnerable browser.<br /><br />
+        In order to use GlobaLeaks you are strongly advised to download and install the Tor Browser.<br/>
+        The Tor Browser includes various privacy and security enhancements not present in other browsers.<br /><br />
+        <a href="https://www.torproject.org/download/" target="_blank" rel="noreferrer noopener" class="text-center">[ Download the Tor Browser ]</a><br /><br />
+        This is the list of the other supported browsers:<br />
+        <ul>
+          <li>Mozilla Firefox &gt;= 38</li>
+          <li>Google Chrome &gt;= 45</li>
+          <li>Safari: &gt;= 8</li>
+          <li>Internet Explorer 11</li>
+          <li>Edge (any)</li>
+          <li>iOS &gt;= 9</li>
+          <li>Android &gt;= 4.4</li>
+        </ul>
+      </div>
+    </div>
 
     <!-- build:js js/scripts.js -->
     <script src="lib/js/qrcode.js"></script>
@@ -67,7 +91,6 @@
     <script src="lib/js/sha256.js"></script>
     <script src="lib/js/stacktrace.js"></script>
     <script src="lib/js/tmhDynamicLocale.js"></script>
-    <script src="lib/js/topojson.js"></script>
     <script src="lib/js/ui-bootstrap-tpls.js"></script>
     <script src="js/app.js"></script>
     <script src="js/constants.js"></script>
@@ -85,6 +108,7 @@
     <script src="js/controllers/recipient.js"></script>
     <script src="js/controllers/tip.js"></script>
     <script src="js/controllers/custodian.js"></script>
+    <script src="js/controllers/admin/home.js"></script>
     <script src="js/controllers/admin/site.js"></script>
     <script src="js/controllers/admin/users.js"></script>
     <script src="js/controllers/admin/contexts.js"></script>
@@ -108,10 +132,10 @@
 
     <noscript>
       <h1>Error! :(</h1>
-      <br /><br />
-      <p>
+      <br />
+      <div>
         Your browser is not running JavaScript that is required to use this site.<br /><br />
-        It is a common belief that JavaScript and Security don't work well together and for this reason we advise to use the <a href=="https://www.torproject.org/">Tor Browser</a>, a browser designed for security and privacy."
+        It is a common belief that JavaScript and Security don't work well together and for this reason we advise to use the <a href=="https://www.torproject.org/">Tor Browser</a>, a browser designed for security and privacy.
       </div>
     </noscript>
   </body>

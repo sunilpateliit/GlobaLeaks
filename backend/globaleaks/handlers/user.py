@@ -1,11 +1,10 @@
 # -*- coding: utf-8
 #
 # Handlers dealing with user preferences
+import base64
 import os
-import pyotp
 
 from nacl.encoding import Base32Encoder, Base64Encoder
-
 from twisted.internet.defer import inlineCallbacks, returnValue
 
 from globaleaks import models
@@ -16,7 +15,7 @@ from globaleaks.orm import db_get, transact
 from globaleaks.rest import errors, requests
 from globaleaks.state import State
 from globaleaks.utils.pgp import PGPContext
-from globaleaks.utils.crypto import GCE, generateRandomKey
+from globaleaks.utils.crypto import generateOtpSecret, generateRandomKey, totpVerify, GCE
 from globaleaks.utils.utility import datetime_now, datetime_null
 
 
@@ -34,6 +33,8 @@ def set_user_password(tid, user, password, cc):
 
     user.password = password_hash
     user.password_change_date = datetime_now()
+
+    State.log(tid=tid, type='change_password', user_id=user.id, object_id=user.id)
 
     if not State.tenant_cache[tid].encryption and cc == '':
         return None
@@ -91,7 +92,7 @@ def user_serialize_user(session, user, language):
     :param session: the session on which perform queries.
     :return: a serialization of the object
     """
-    picture = os.path.exists(os.path.join(State.settings.files_path, user.id))
+    picture = session.query(models.File).filter(models.File.name == user.id).one_or_none() is not None
 
     # take only contexts for the current tenant
     contexts = [x[0] for x in session.query(models.ReceiverContext.context_id)
@@ -252,12 +253,12 @@ def update_user_settings(session, tid, user_session, request, language):
 @inlineCallbacks
 def can_edit_general_settings_or_raise(handler):
     """Determines if this user has ACL permissions to edit general settings"""
-    if handler.current_user.user_role == 'admin':
+    if handler.session.user_role == 'admin':
         returnValue(True)
     else:
         # Get the full user so we can see what we can access
-        user = yield get_user(handler.current_user.user_tid,
-                              handler.current_user.user_id,
+        user = yield get_user(handler.session.user_tid,
+                              handler.session.user_id,
                               handler.request.language)
         if user['can_edit_general_settings'] is True:
             returnValue(True)
@@ -273,15 +274,15 @@ class UserInstance(BaseHandler):
     invalidate_cache = True
 
     def get(self):
-        return get_user(self.current_user.user_tid,
-                        self.current_user.user_id,
+        return get_user(self.session.user_tid,
+                        self.session.user_id,
                         self.request.language)
 
     def put(self):
         request = self.validate_message(self.request.content.read(), requests.UserUserDesc)
 
-        return update_user_settings(self.current_user.user_tid,
-                                    self.current_user,
+        return update_user_settings(self.session.user_tid,
+                                    self.session,
                                     request,
                                     self.request.language)
 
@@ -322,7 +323,7 @@ def enable_2fa_step1(session, tid, user_id):
     if user.two_factor_secret:
         return user.two_factor_secret
 
-    user.two_factor_secret = pyotp.random_base32()
+    user.two_factor_secret = generateOtpSecret()
 
     return user.two_factor_secret
 
@@ -341,10 +342,12 @@ def enable_2fa_step2(session, tid, user_id, user_cc, token):
     user = db_get_user(session, tid, user_id)
 
     # RFC 6238: step size 30 sec; valid_window = 1; total size of the window: 1.30 sec
-    if pyotp.TOTP(user.two_factor_secret).verify(token):
-        user.two_factor_enable = True
-    else:
+    try:
+        totpVerify(user.two_factor_secret, token)
+    except:
         raise errors.InvalidTwoFactorAuthCode
+
+    user.two_factor_enable = True
 
 
 @transact
@@ -366,23 +369,23 @@ class UserOperationHandler(OperationHandler):
     check_roles = 'user'
 
     def get_recovery_key(self, req_args, *args, **kwargs):
-        return get_recovery_key(self.current_user.user_tid,
-                                self.current_user.user_id,
-                                self.current_user.cc)
+        return get_recovery_key(self.session.user_tid,
+                                self.session.user_id,
+                                self.session.cc)
 
     def enable_2fa_step1(self, req_args, *args, **kwargs):
-        return enable_2fa_step1(self.current_user.user_tid,
-                                self.current_user.user_id)
+        return enable_2fa_step1(self.session.user_tid,
+                                self.session.user_id)
 
     def enable_2fa_step2(self, req_args, *args, **kwargs):
-        return enable_2fa_step2(self.current_user.user_tid,
-                                self.current_user.user_id,
-                                self.current_user.cc,
+        return enable_2fa_step2(self.session.user_tid,
+                                self.session.user_id,
+                                self.session.cc,
                                 req_args['value'])
 
     def disable_2fa(self, req_args, *args, **kwargs):
-        return disable_2fa(self.current_user.user_tid,
-                           self.current_user.user_id)
+        return disable_2fa(self.session.user_tid,
+                           self.session.user_id)
 
     def operation_descriptors(self):
         return {

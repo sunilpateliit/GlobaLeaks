@@ -40,7 +40,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
 "Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: English (http://www.transifex.com/otf/globaleaks/language/en/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -285,12 +285,6 @@ msgstr "Custodian of the identities"
 msgid "Identity"
 msgstr "Identity"
 
-msgid "Available"
-msgstr "Available"
-
-msgid "Not available"
-msgstr "Not available"
-
 msgid "Access requested"
 msgstr "Access requested"
 
@@ -381,9 +375,6 @@ msgstr "Strong"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Text shown on top of the interface for selecting contexts"
-
-msgid "Type to search…"
-msgstr "Type to search…"
 
 msgid "Silence email notifications"
 msgstr "Silence email notifications"
@@ -771,6 +762,9 @@ msgstr "Logo"
 msgid "Project name"
 msgstr "Project name"
 
+msgid "Description"
+msgstr "Description"
+
 msgid "Homepage title"
 msgstr "Homepage title"
 
@@ -830,9 +824,6 @@ msgstr "Disabled"
 
 msgid "Enabled"
 msgstr "Enabled"
-
-msgid "Description"
-msgstr "Description"
 
 msgid "Questionnaire"
 msgstr "Questionnaire"
@@ -929,15 +920,6 @@ msgstr "Invalid input format."
 
 msgid "Input should be similar to:"
 msgstr "Input should be similar to:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Using Let's Encrypt requires agreement to their Terms of Service."
-
-msgid "Read the Terms of Service"
-msgstr "Read the Terms of Service"
-
-msgid "I agree to the Terms of Service."
-msgstr "I agree to the Terms of Service."
 
 msgid "Country code"
 msgstr "Country code"
@@ -1085,9 +1067,6 @@ msgstr "Terms of service"
 msgid "Date range"
 msgstr "Date range"
 
-msgid "Map"
-msgstr "Map"
-
 msgid "Group of questions"
 msgstr "Group of questions"
 
@@ -1195,12 +1174,6 @@ msgstr "Sites"
 
 msgid "Mode:"
 msgstr "Mode:"
-
-msgid "Active"
-msgstr "Active"
-
-msgid "Inactive"
-msgstr "Inactive"
 
 msgid "Configure"
 msgstr "Configure"
@@ -1551,9 +1524,6 @@ msgstr "File size"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Allow the whistleblower to add attachments to the report"
 
-msgid "Never"
-msgstr "Never"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Allow the whistleblower to send messages"
 
@@ -1655,9 +1625,6 @@ msgstr "Access to the whistleblower's identity has been requested to the custodi
 
 msgid "Date of the request"
 msgstr "Date of the request"
-
-msgid "Undeclared"
-msgstr "Undeclared"
 
 msgid "Congratulations!"
 msgstr "Congratulations!"

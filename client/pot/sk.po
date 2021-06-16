@@ -15,8 +15,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: Lenka Ježková <lenka.jezkova@oziveni.cz>\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Slovak (http://www.transifex.com/otf/globaleaks/language/sk/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -260,12 +260,6 @@ msgstr "Správca identít"
 msgid "Identity"
 msgstr "Identita"
 
-msgid "Available"
-msgstr "Dostupný"
-
-msgid "Not available"
-msgstr "Nedostupný"
-
 msgid "Access requested"
 msgstr "Vyžiadaný prístup"
 
@@ -356,9 +350,6 @@ msgstr "Silné"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "Text zobrazený na vrchu rozhrania pre výber kontextov"
-
-msgid "Type to search…"
-msgstr "Píšte pre vyhľadávanie..."
 
 msgid "Silence email notifications"
 msgstr "Tiché emailové notifikácie"
@@ -746,6 +737,9 @@ msgstr "Logo"
 msgid "Project name"
 msgstr "Názov projektu"
 
+msgid "Description"
+msgstr "Popis"
+
 msgid "Homepage title"
 msgstr "Názov domovskej stránky"
 
@@ -805,9 +799,6 @@ msgstr "Vypnuté"
 
 msgid "Enabled"
 msgstr "Zapnuté"
-
-msgid "Description"
-msgstr "Popis"
 
 msgid "Questionnaire"
 msgstr "Dotazník"
@@ -904,15 +895,6 @@ msgstr "Neplatný vstupný formát."
 
 msgid "Input should be similar to:"
 msgstr "Vstup by mal byť podobný:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "Použitie funkcie Let's Encrypt  si vyžaduje súhlas s ich zmluvnými podmienkami."
-
-msgid "Read the Terms of Service"
-msgstr "Prečítať si zmluvné podmienky"
-
-msgid "I agree to the Terms of Service."
-msgstr "Súhlasím s podmienkami užívania služby."
 
 msgid "Country code"
 msgstr "Kód krajiny"
@@ -1060,9 +1042,6 @@ msgstr "Podmienky používania služby"
 msgid "Date range"
 msgstr "Časové obdobie"
 
-msgid "Map"
-msgstr "Mapa"
-
 msgid "Group of questions"
 msgstr "Skupina otázok"
 
@@ -1170,12 +1149,6 @@ msgstr "Stránky"
 
 msgid "Mode:"
 msgstr "Režim:"
-
-msgid "Active"
-msgstr "Aktívny"
-
-msgid "Inactive"
-msgstr "Neaktívny"
 
 msgid "Configure"
 msgstr "Nastavenie"
@@ -1526,9 +1499,6 @@ msgstr "Veľkosť súboru"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "Povoliť oznamovateľovi pripojiť prílohy k podaniu"
 
-msgid "Never"
-msgstr "Nikdy"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "Povoliť oznamovateľovi posielať správy"
 
@@ -1630,9 +1600,6 @@ msgstr "Správca bol požiadaný o prístup k identite oznamovateľa."
 
 msgid "Date of the request"
 msgstr "Dátum žiadosti"
-
-msgid "Undeclared"
-msgstr "Neohlásený"
 
 msgid "Congratulations!"
 msgstr "Gratulujeme!"

@@ -43,8 +43,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
-"PO-Revision-Date: 2021-03-28 16:19+0000\n"
-"Last-Translator: Hassen Aouali <fozbalnetwork@gmail.com>\n"
+"PO-Revision-Date: 2021-05-17 10:54+0000\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>\n"
 "Language-Team: Arabic (http://www.transifex.com/otf/globaleaks/language/ar/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -288,12 +288,6 @@ msgstr "حارس الهويات"
 msgid "Identity"
 msgstr "الهوية"
 
-msgid "Available"
-msgstr "متوفر"
-
-msgid "Not available"
-msgstr "غير متوفر"
-
 msgid "Access requested"
 msgstr "مطلوب النفاذ"
 
@@ -384,9 +378,6 @@ msgstr "قوي"
 
 msgid "Text shown on top of the interface for selecting contexts"
 msgstr "النص ظاهر أعلى واجهة اختيار السياقات"
-
-msgid "Type to search…"
-msgstr "اكتب للبحث…"
 
 msgid "Silence email notifications"
 msgstr "اسكات الاشعارات بالبريد الالكتروني"
@@ -774,6 +765,9 @@ msgstr "الشعار "
 msgid "Project name"
 msgstr "اسم المشروع"
 
+msgid "Description"
+msgstr "وصف"
+
 msgid "Homepage title"
 msgstr "عنوان الصفحة الرئيسية"
 
@@ -833,9 +827,6 @@ msgstr "غير مفعل"
 
 msgid "Enabled"
 msgstr "مفعل"
-
-msgid "Description"
-msgstr "وصف"
 
 msgid "Questionnaire"
 msgstr "استبيان"
@@ -932,15 +923,6 @@ msgstr "صيغة الإدخال غير صالحة."
 
 msgid "Input should be similar to:"
 msgstr "يجب أن يكون المدخل مشابها ل:"
-
-msgid "Using Let's Encrypt requires agreement to their Terms of Service."
-msgstr "يتطلب استخدام Let's Encrypt الموافقة على بنود الخدمة الخاصة بهم."
-
-msgid "Read the Terms of Service"
-msgstr "اقرأ بنود الخدمة"
-
-msgid "I agree to the Terms of Service."
-msgstr "أوافق على شروط الخدمة."
 
 msgid "Country code"
 msgstr "مفتاح الدّولة"
@@ -1088,9 +1070,6 @@ msgstr "شروط الخدمة"
 msgid "Date range"
 msgstr "نطاق التاريخ"
 
-msgid "Map"
-msgstr "الخريطة"
-
 msgid "Group of questions"
 msgstr "مجموعة من الأسئلة"
 
@@ -1198,12 +1177,6 @@ msgstr "المواقع"
 
 msgid "Mode:"
 msgstr "الوضع:"
-
-msgid "Active"
-msgstr "نشيط"
-
-msgid "Inactive"
-msgstr "غير نشط"
 
 msgid "Configure"
 msgstr "اضبط"
@@ -1554,9 +1527,6 @@ msgstr "حجم الملف"
 msgid "Allow the whistleblower to add attachments to the report"
 msgstr "السّماح للمبلغين باضافة مرفقات إلى البلاغ"
 
-msgid "Never"
-msgstr "أبدا"
-
 msgid "Allow the whistleblower to send messages"
 msgstr "تمكين المبلغ من ارسال رسائل"
 
@@ -1658,9 +1628,6 @@ msgstr "تمّ طلب الحصول على هوية المبلغ من الوصي�
 
 msgid "Date of the request"
 msgstr "تاريخ الطلب"
-
-msgid "Undeclared"
-msgstr "غير معلن."
 
 msgid "Congratulations!"
 msgstr "تهانينا!"
